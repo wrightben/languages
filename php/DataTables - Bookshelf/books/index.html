@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+	<head>
+
+		<title>Digital Bookshelf - Benjamin Wright</title>
+
+		<meta charset="UTF-8">
+		<meta name="description" content="Digital Bookshelf of leading experts in software engineering, management, marketing, design, and psychology">
+		<meta name="keywords" content="bookshelf,ebooks,kindle">
+
+		<link rel="stylesheet" type="text/css" href="./css/jquery.dataTables.min.css"/>
+		
+		<style>
+			body, p, td {
+				font-family: "Helvetica", "Arial", sans-serif;
+				font-weight: 300;				
+				color #050505;
+			}	
+			td {
+				font-size: .9em;
+			}
+			h1 {
+				margin-bottom: 0 !important;
+				margin-left: 24px !important;
+				font-weight: 300;
+				font-size: 1.3em;
+				text-transform: uppercase;
+			}
+
+			h1 + div {
+				margin-top: 0 !important;
+			}			
+			a {
+				text-decoration: none;
+				color: #488abe;
+			}
+			a:hover {
+				color: rgb( 75, 102, 130);
+			}
+			.bio {
+				width: 550px;
+				line-height: 1.5em;
+			}
+			.margin {
+				margin: 25px;
+			}
+
+			.font-weight-400 {
+				font-weight: 400;
+			}
+			input[type=search] {
+				border: none;
+				border-bottom: 1px solid #050505;
+				padding: 0.5em;
+			}
+			input[type=search]:focus {
+				background-color: lightblue;
+				outline: none;
+			}   
+			th.dt-head-left {
+				padding-left: .7em !important;
+				font-weight: 300 !important;
+				color: 050505;
+				text-transform: uppercase;
+			}
+
+			th.dt-head-left:before {
+				content: "_";
+				margin-right: 6px;
+			}
+		</style>
+		
+		
+
+	</head>
+	<body>
+		
+		<h1 class="margin">&#95;&#95; Digital Bookshelf</h1>
+		
+		<div class="margin bio">
+			<p></p>
+			
+			<p>
+			   	<a href="#" onclick="return searchTable('');" class="font-weight-400" >everything</a>, 
+				<a href="#" onclick="return searchTable('biography');">biography</a>, 
+				<a href="#" onclick="return searchTable('business');">business</a>, 
+				<a href="#" onclick="return searchTable('communication');">communication</a>, 
+				<a href="#" onclick="return searchTable('design');">design</a>, 
+				<a href="#" onclick="return searchTable('finance');">finance</a>, 
+				<a href="#" onclick="return searchTable('law');">law</a>, 
+				<a href="#" onclick="return searchTable('management');">management</a>, 
+				<a href="#" onclick="return searchTable('marketing');">marketing</a>, 
+				<a href="#" onclick="return searchTable('mathematics');">mathematics</a>, 
+				<a href="#" onclick="return searchTable('programming');">programming</a>, 
+				<a href="#" onclick="return searchTable('psychology');">psychology</a>, 
+				<a href="#" onclick="return searchTable('science');">science (other)</a>, 
+				<a href="#" onclick="return searchTable('security');">security</a>, 
+				<a href="#" onclick="return searchTable('sociology');">sociology</a>, 
+				<a href="#" onclick="return searchTable('sdm');">software engineering</a>, 
+				<a href="#" onclick="return searchTable('user experience');">user experience</a>,
+				<a href="#" onclick="return searchTable('⭑⭑⭑');">3+ stars</a>
+			</p>
+		</div>
+
+		<div class="margin" >		
+			<table id="example" class="display" width="100%">
+				<thead>
+					<tr>
+						<th>Title</th>
+						<th>Author</th>
+						<th>Publisher</th>
+						<th>Tags</th>
+						<th>Notes</th>
+						<th>Rating</th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		
+		<script type="text/javascript" src="./js/jquery-3.3.1.js"></script>		
+		<script type="text/javascript" src="./js/jquery.dataTables.min.js"></script>
+    
+		<script>
+			jQuery(document).ready(function() {
+				loadTable('data');
+			})
+			
+			var loadTable = function(data) {
+				jQuery('#example').DataTable({
+					"destroy": true,
+					"ajax": data, // url
+					"dom": 'frti',
+					"columns": [
+						{ "data": "title" },
+						{ "data": "author" },
+						{ "data": "publisher" },
+						{ "data": "tags" },
+						{ "data": "notes" },
+						{ "data": "rating" }
+					],
+					"columnDefs": [{
+					    "targets": "_all",
+					    "className": 'dt-head-left'
+					},					
+					{
+					      "targets": 4, // "Notes is hidden"
+					      "searchable": false,
+					      "visible": false
+					}],					
+					"lengthMenu": [[-1], ["All"]],
+					"language": { "search": "&#95; SEARCH " }
+				});			
+			}
+			
+			var searchTable = function(search) {
+				jQuery('input[type="search"]').val(search).trigger('keyup');
+				return false;
+			}	
+		</script>
+    
+	</body>
+</html>
