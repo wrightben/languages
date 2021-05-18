@@ -1,2 +1,6 @@
-# README.md
+# JavaScript
+
+```Shell
+node hello.js
+```
 
