@@ -1,6 +1,7 @@
 # README.md
 
 ```shell
-cc hello.c #compiles
-./a.out #runs
+# Hello, World — Compile and Execute
+cc hello.c
+./a.out
 ```
