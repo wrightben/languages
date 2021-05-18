@@ -1,5 +1,5 @@
 # python
 
-```
-python3 script.py
+```shell
+python3 hello.py
 ```
