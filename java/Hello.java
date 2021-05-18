@@ -1,4 +1,4 @@
-public class Main {
+public class Hello {
 	
 	public int addXY(int y, int x) {
 		
@@ -12,13 +12,13 @@ public class Main {
 		
 		System.out.println( "Hello, world" );
 		
-		Main n = new Main();
+		Hello h = new Hello();
 		
 //		System.out.println( new Main().add3(5) );
 		int x = 3;
 		int y = 5;
 		
-		System.out.println(  x + " + " + y + " = " + n.addXY( x, y ) );		
+		System.out.println(  x + " + " + y + " = " + h.addXY( x, y ) );
 		
 	}
 	
