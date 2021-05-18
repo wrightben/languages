@@ -1,6 +1,4 @@
-# Java
-
-Code examples taken from eclipse workspace with bin folders removed
+# README.md
 
 ```shell
 javac Hello.java #compiles to Hello.class
