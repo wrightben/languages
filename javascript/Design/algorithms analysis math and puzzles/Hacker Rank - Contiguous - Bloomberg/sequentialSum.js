@@ -1,5 +1,5 @@
-// Which contiguous numbers add to _int?
-function contiguous(_int) {
+// Which sequential integers sum to _int?
+function sequentialSum(_int) {
 	
 	var count = 0;
 	var r = 0;
@@ -27,11 +27,11 @@ function contiguous(_int) {
 	
 }
 var x;
-x = contiguous(15);
+x = sequentialSum(15);
 console.log(x);
-x = contiguous(45);
+x = sequentialSum(45);
 console.log(x);
-x = contiguous(210);
+x = sequentialSum(210);
 console.log(x);
-x = contiguous(1000);
+x = sequentialSum(1000);
 console.log(x);

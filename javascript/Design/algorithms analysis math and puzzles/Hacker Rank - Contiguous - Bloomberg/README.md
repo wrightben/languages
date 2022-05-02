@@ -1,9 +1,9 @@
-The challenge is to find contiguous integers that sum to _int.
+The challenge is to find sequential integers that sum to _int.
 
-This challenge was presented by Bloomberg using HackerRank in April 2022. I couldn't remember the algebraic solution during the interview. My solution at the time used nested for loops counting from i = 1, and j = i + 1, both ending at (_int/2).
+This challenge was presented by Bloomberg using HackerRank in April 2022. I couldn't remember the algebraic solution during the interview. My solution at the time used nested for loops counting from i = 1, and j = i + 1, to (_int/2) and testing the sum.
 
 ```JavaScript
-function contiguous(_int) {
+function sequentialSum(_int) {
 	
 	var count = 0;
 	var r = 0;
@@ -31,7 +31,7 @@ function contiguous(_int) {
 	
 }
 var x;
-x = contiguous(15);
+x = sequentialSum(15);
 console.log(x);
 ```
 
