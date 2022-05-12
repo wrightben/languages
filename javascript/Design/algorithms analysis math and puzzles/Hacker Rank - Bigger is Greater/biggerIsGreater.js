@@ -29,17 +29,15 @@ function biggerIsGreater(w) {
 		
 		var equal = es.every( (e,j) => e == fs[j] ); // es == fs
 		if (! equal) {
-// 			console.log(equal);
-			if (i > 0) { prepend = prepend.concat( s.slice(0,i) ); } // Prepend unaffected columns
+
+			if (i > 0) { prepend = s.slice(0,i); } // Prepend unaffected columns
 // 			console.log(prepend);
 				
 			for (var k = n - 1; k >= 0; k--) {
 				if (fs[k] > es[0]) {
-					append[0] = fs[k];
-					fs.splice(k,1);
-					for (var l = fs.length - 1; l >= 0; l--) {
-						append.push(fs[l]);
-					}
+					append[0] = fs[k]; // Append fs[k] to append
+					fs.splice(k,1); // Remove fs[k] from fs
+					append = append.concat( fs.reverse() );
 					break;
 				}
 			}
