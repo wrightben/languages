@@ -34,7 +34,7 @@ Deviant behavior almost certainly increases mess (it wouldn't always in the rand
 
 Is the male who doesn't touch the seat deviant (1 or 2)? Why does down-1-down seem acceptable or even common? Is he, in fact, the worst of the deviants?
 
-#### The Lid (Not inclusive of lid deviants)
+#### The Lid (Not inclusive of the insane)
 
 Closing the lid affects everyone, even the deviants. It does not affect the insane person. But it does lead to interesting questions about how the insane person's activities are defined.
 
