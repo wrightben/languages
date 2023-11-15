@@ -1,0 +1,1 @@
+This is the point at which I quit my Machine Learning, Behavioral Science, Sociology, Law, and other Liberal Arts courses.
