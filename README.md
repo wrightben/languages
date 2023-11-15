@@ -1,2 +1,2 @@
 # languages
-c, cpp, java, javascript, perl, php, python
+bash, c, cpp, java, javascript, perl, php, python
