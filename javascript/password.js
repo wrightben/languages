@@ -26,6 +26,6 @@ javascript: (function() {
 
 /* 
 	- Reduction is possible (UC or LC).
-	- It's not easily guessable what reduction will occur in the originally uploaded signature
+	- It's not easily guessable what reduction will actually occur in the originally uploaded body
 	- This code explicitly shows reduction was considered
 */
