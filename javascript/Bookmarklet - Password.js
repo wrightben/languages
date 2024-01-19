@@ -12,7 +12,7 @@ javascript: (function() {
 		password.push(characters[Math.floor(Math.random() * 64)]);
 	};
 	
-	/* Replace 3 random characters in the password with special characters */
+	/* Replace between 1 and 3 random characters in the password with special characters */
 	for (var j = 0; j < req1; j++) {
 		password[Math.floor(Math.random() * x)] = special[Math.floor(Math.random() * 3)];
 	};
@@ -28,4 +28,11 @@ javascript: (function() {
 	- Reduction is possible (UC or LC).
 	- It's not easily guessable what reduction will actually occur in the originally uploaded body
 	- This code explicitly shows reduction was considered
+	
+	
+	- Weighted numbers can be imitated like this:
+		1:1,2:1,3:1 {30% = 1};
+		4:2,5:2 {20% = 2};
+		6:3,7:3,8:3,9:3 {40% = 3}; 
+		10:4 {10% = 5}
 */
