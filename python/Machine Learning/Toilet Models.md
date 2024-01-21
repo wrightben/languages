@@ -3,7 +3,7 @@ The estimation of work for the average individual and the average mess for a pop
 1. Put the seat up at the end of bathroom use
 2. Put the seat down at the end of bathroom use
 3. Leave it in the used configuration
-4. Affect of specific agent interactions
+4. Effect of specific agent interactions
 
 I can run all kinds of these scenarios a lot of times each.
 
