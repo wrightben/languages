@@ -17,7 +17,7 @@ I can run all kinds of these scenarios a lot of times each.
 ## Behaviors:
 ### Non-deviant behavior:
 #### Males
-One type of male never puts the seat up, no matter what. He 2. Or he 1. And leaves the seat configured.
+One type of male never puts the seat up no matter what. He 2. Or he 1. And leaves the seat configured.
 One type of male just puts it into his needed configuration and leaves it.
 
 The other types of male put it into their needed configuration and then put it into some programmed position. (This set includes both types of deviant.)
