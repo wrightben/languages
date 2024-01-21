@@ -25,7 +25,7 @@ javascript: (function() {
 })();
 
 /* 
-	- Reduction is possible (UC or LC, for example) if each character is chosen from a complete list of 64. But guessing when the reduction is occurs is unlikely.
+	- Reduction is possible (UC or LC, for example) if each character is chosen from a complete list of 64. But guessing when the reduction occurs is unlikely.
 	
 	- Weighted numbers can be imitated like this:
 		1:1,2:1,3:1 {30% = 1};
