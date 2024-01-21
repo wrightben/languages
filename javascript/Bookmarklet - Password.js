@@ -25,14 +25,16 @@ javascript: (function() {
 })();
 
 /* 
-	- Reduction is possible (UC or LC).
-	- It's not easily guessable what reduction will actually occur in the originally uploaded body
-	- This code explicitly shows reduction was considered
-	
+	- Reduction is possible (UC or LC, for example) if each character is chosen from a complete list of 64. But guessing when the reduction is occurs is unlikely.
 	
 	- Weighted numbers can be imitated like this:
 		1:1,2:1,3:1 {30% = 1};
 		4:2,5:2 {20% = 2};
 		6:3,7:3,8:3,9:3 {40% = 3}; 
 		10:4 {10% = 5}
+		
+	- The 4 classes (UC, LC, # and $) could be weighted equally
+		- Step 1: Choose random (1-4)
+		- Step 2: Choose random from class.
+		
 */
