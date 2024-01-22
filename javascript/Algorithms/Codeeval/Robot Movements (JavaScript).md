@@ -19,7 +19,7 @@ CodeEval's answer for a four-by-four grid:<br/>
 ---
 ### Run the Code
 
-[robotMovements.js](https://github.com/wrightben/codeeval/blob/master/code/robotMovements.js)
+[robotMovements.js](./code/robotMovements.js)
 
 ```sh
 time node robotMovements.js

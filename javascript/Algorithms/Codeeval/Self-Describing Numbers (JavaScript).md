@@ -21,7 +21,7 @@ If the number is a self-describing number, print out a 1. If not, print out a 0 
 ---
 ### Run the Code
 
-[selfDescribingNumbers.js](https://github.com/wrightben/codeeval/blob/master/code/selfDescribingNumbers.js)
+[selfDescribingNumbers.js](./code/selfDescribingNumbers.js)
 
 ```sh
 time node selfDescribingNumbers.js input_sample_4.txt

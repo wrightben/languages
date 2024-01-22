@@ -23,8 +23,8 @@ Print to stdout, permutations of the string, comma separated, in alphabetical or
 ---
 ### Run the Code
 
-[cachedPermutationStrings.js](https://github.com/wrightben/codeeval/blob/master/code/cachedPermutationStrings.js) (Optional)<br />
-[stringPermutations.js](https://github.com/wrightben/codeeval/blob/master/code/stringPermutations.js)
+[cachedPermutationStrings.js](./code/cachedPermutationStrings.js) (Optional)<br />
+[stringPermutations.js](./code/stringPermutations.js)
 
 ```sh
 time node stringPermutations.js input_sample_1.txt

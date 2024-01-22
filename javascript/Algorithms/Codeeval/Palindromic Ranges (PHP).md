@@ -33,7 +33,7 @@ For the curious: In the third example, the subranges are: [87](0 palindromes), [
 ---
 ### Run the Code
 
-[palindromicRanges.php](https://github.com/wrightben/codeeval/blob/master/code/palindromicRanges.php)
+[palindromicRanges.php](./code/palindromicRanges.php)
 
 ```sh
 time php palindromicRanges.php input_sample_3.txt
