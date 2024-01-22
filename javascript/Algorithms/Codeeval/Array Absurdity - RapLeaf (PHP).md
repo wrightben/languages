@@ -24,7 +24,7 @@ Print out the duplicate digit for each line:
 ---
 ### Run the Code
 
-[arrayAbsurdity.php](https://github.com/wrightben/codeeval/blob/master/code/arrayAbsurdity.php)
+[arrayAbsurdity.php](./code/arrayAbsurdity.php)
 
 ```sh
 time php arrayAbsurdity.php input_sample_2.txt
