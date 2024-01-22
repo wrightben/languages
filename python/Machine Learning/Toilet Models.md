@@ -3,7 +3,7 @@ The estimation of work for the average individual and the average mess for a pop
 1. Put the seat up at the end of bathroom use
 2. Put the seat down at the end of bathroom use
 3. Leave it in the used configuration
-4. Affect of specific agent interactions
+4. Effect of specific agent interactions
 
 I can run all kinds of these scenarios a lot of times each.
 
@@ -17,7 +17,7 @@ I can run all kinds of these scenarios a lot of times each.
 ## Behaviors:
 ### Non-deviant behavior:
 #### Males
-One type of male never puts the seat up, no matter what. He 2. Or he 1. And leaves the seat configured.
+One type of male never puts the seat up no matter what. He 2. Or he 1. And leaves the seat configured.
 One type of male just puts it into his needed configuration and leaves it.
 
 The other types of male put it into their needed configuration and then put it into some programmed position. (This set includes both types of deviant.)
