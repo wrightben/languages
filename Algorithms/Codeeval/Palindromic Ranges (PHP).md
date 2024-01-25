@@ -44,6 +44,8 @@ time php palindromicRanges.php input_sample_3.txt
 ---
 ### About My Solution
 
+The part I find interesting 15 years later is not that I used such a difficult-to-understand process for listing the subranges, but that I didn't know what the word *even* (as in not odd) meant.
+
 > Range: 87 88<br />
 Range + Subranges: [87,88](1 palindrome), [87](0 palindromes), [88](1 palindrome)<br />
 1 *interesting* subrange: [87](0 palindromes)
