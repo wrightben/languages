@@ -12,14 +12,8 @@ for (var i = 1; i < l; i++ ) {
 }
 
 // List the subranges
-var sub;
-for (var i = 0; i < l; i++) {
-	
-	sub = [];
-	
-	for (var j = i; j < l; j++) {	
-		sub.push(a[j]);
-		console.log(sub);
+for (var i = 0; i <= l; i++) {
+	for (var j = i + 1; j <= l; j++) {	
+		console.log(a.slice(i,j));	
 	}
-	
 }
