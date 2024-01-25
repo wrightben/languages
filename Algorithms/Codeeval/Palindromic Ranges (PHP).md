@@ -44,4 +44,6 @@ time php palindromicRanges.php input_sample_3.txt
 ---
 ### About My Solution
 
-My ignorant approach to subranges is shown in [output_sample_3-debug.txt](./code/output_sample_3-debug.txt)
+My ignorant approach to subranges is shown in [output_sample_3-debug.txt](./code/output_sample_3-debug-recursion.txt)
+
+
