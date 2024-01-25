@@ -1,9 +1,9 @@
-Path 1-: 123456
-Path 1-: 12345
-Path 1-: 1234
-Path 1-: 123
-Path 1-: 12
-Path 1-: 1
+Path 1: 123456
+Path 1: 12345
+Path 1: 1234
+Path 1: 123
+Path 1: 12
+Path 1: 1
 		Path 2: 2
 		Path 2: 23
 				Waste 1: 2
