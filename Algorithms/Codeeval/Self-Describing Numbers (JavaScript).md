@@ -32,7 +32,7 @@ time node selfDescribingNumbers.js input_sample_4.txt
 ---
 ### About My Solution
 **Self-describing number:**<br />
-The value of the index is a count of how many times the index is a value.
+The value at each index is a count of how many times the index is a value.
 
 > **orderedHash**[ 0:2, 1:0, 2:2, 3:0 ]
 
