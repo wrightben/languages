@@ -14,7 +14,7 @@ The range [L1,R1] is a subrange of [L,R] if L <= L1 <= R1 <= R. Your job is to d
 
 Your program should accept as its first argument a path to a filename. Each line in this file is one test case. Each test case will contain two positive integers, L and R (in that order), separated by a space. eg. 
 
-> 1 2<br />
+1 2<br />
 1 7<br />
 87 88
 
@@ -22,7 +22,7 @@ Your program should accept as its first argument a path to a filename. Each line
 
 For each line of input, print out the number of interesting subranges of [L,R] eg. 
 
-> 1<br/>
+1<br/>
 12<br/>
 1
 
@@ -44,6 +44,8 @@ time php palindromicRanges.php input_sample_3.txt
 ---
 ### About My Solution
 
-> Range: 87 88<br />
+Range: 87 88<br />
 Range + Subranges: [87,88](1 palindrome), [87](0 palindromes), [88](1 palindrome)<br />
 1 *interesting* subrange: [87](0 palindromes)
+
+My ignorant approach to subranges is shown in [output_sample_3-debug.txt](./code/output_sample_3-debug.txt)
