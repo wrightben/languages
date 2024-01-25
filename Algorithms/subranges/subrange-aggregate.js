@@ -18,8 +18,15 @@ for (var i = 0; i < l; i++) {
 	sub = [];
 	
 	for (var j = i; j < l; j++) {	
+
+		// Aggregate
 		sub.push(a[j]);
 		console.log(sub);
+
+		// or
+
+		// Slice
+		console.log(a.slice(i,j));
 	}
 	
 }
