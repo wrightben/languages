@@ -44,6 +44,6 @@ time php palindromicRanges.php input_sample_3.txt
 ---
 ### About My Solution
 
-My ignorant approach to subranges is shown in [output_sample_3-debug.txt](./code/output_sample_3-debug-recursion.txt)
+My ignorant approach to subranges is shown in [output_sample_3-debug.txt](./code/output_sample_3-debug-recursion.txt). Now I see that a second array could be populated with a 1 or 0 at each index indicating whether or not that index was a palindrome. Reduce could then sum the total palindromes for the subranges.
 
 
