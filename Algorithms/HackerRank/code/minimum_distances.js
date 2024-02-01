@@ -1,5 +1,6 @@
 function minimumDistances(a) {
     var o = {};
+    
     a.forEach(function(e,i) {
         if (typeof o[e] != "undefined") {
             o[e].push(i);
@@ -8,6 +9,7 @@ function minimumDistances(a) {
         }
     });
     // console.log(o);
+    
     var c = [];
     var keys = Object.keys(o);
     keys.forEach(function(e,i) {
