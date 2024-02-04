@@ -120,12 +120,38 @@ sets.forEach(function(e,i) {
 
 parent.addEventListener('click', 
 	function(e) {
-		var count = 0;
+		var index = 0;
 		for (const child of children) {
 			if (child == e.target) {
-				e.target.innerHTML = mines[count] ;
+				var i = mines[index];
+
+				switch (i) {
+					case -1:
+						child.innerHTML = "&#128163"
+						break;
+					case 0:
+						child.innerHTML = 0
+						break;
+					case 1:
+						child.innerHTML = 1
+						break;	
+					case 2:
+						child.innerHTML = 2
+						break;						
+					case 3:
+						child.innerHTML = 3
+						break;						
+					case 4:
+						child.innerHTML = 4
+						break;						
+					default:
+						child.innerHTML = i;
+				}
+					
+					
+					
 			}
-			count ++;
+			index ++;
 		}
 	}
 );
@@ -137,9 +163,9 @@ parent.addEventListener('contextmenu', (e) => {
 		var index = 0;
 		for (const child of children) {
 			if (child == e.target) {
-				(child.innerHTML == "F") ?
+				(child.innerHTML == "&#128681;") ?
 					child.innerHTML = "" :
-					child.innerHTML = "F";
+					child.innerHTML = "&#128681;";
 			}
 			index ++;
 		}
