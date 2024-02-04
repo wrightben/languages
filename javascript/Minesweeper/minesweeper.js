@@ -123,27 +123,12 @@ parent.addEventListener('click',
 		var count = 0;
 		for (const child of children) {
 			if (child == e.target) {
-				e.target.innerHTML = mines[count];
+				e.target.innerHTML = mines[count] ;
 			}
 			count ++;
 		}
 	}
 );
-
-
-// Place Mines
-// mines.forEach(function(e,i) {
-// 	if (e == -1) {
-// 		el.item(i).innerHTML = "@";
-// 	}
-// });
-
-// 	if ( count != 0 ) {
-// 		el.item(i).innerHTML = count;
-// 	}
-
-console.log(mines,parent,children);
-
 
 
 /*
