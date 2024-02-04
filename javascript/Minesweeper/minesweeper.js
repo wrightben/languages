@@ -81,55 +81,74 @@ var sets = [ [2,10,11],
 	[71,72,80]
 ];
 
-var bombs = new Array(81).fill(0);
-var setBombs = function() {
+var mines = new Array(81).fill(0);
+var setMines = function() {
 	count = 10;
 	var i;
 	while (count > 0) {
-		while (bombs[ i ] != 0) {
+		while (mines[ i ] != 0) {
 			i = Math.floor( Math.random() * 81 );
 		}
-		bombs[ i ] = -1;
+		mines[ i ] = -1;
 		count --;
 	}
 };
 
-setBombs();
+setMines();
 
 // getElementsByClassName
-el = document.getElementsByClassName('grid-item');
-
-// Place Bombs
-bombs.forEach(function(e,i) {
-	if (e == -1) {
-		el.item(i).innerHTML = "@";
-	}
-});
+gc = document.getElementsByClassName('grid-container');
+parent = gc.item(0);
+children = parent.children;
 
 // Place Counts
 sets.forEach(function(e,i) {
 
-	if (bombs[i] == -1) { return; }
+	if (mines[i] == -1) { return; }
 	
 	var count = 0;
 	e.forEach(function(_e,_i) {
- 	if (bombs[_e - 1]  == -1) {
+ 	if (mines[_e - 1]  == -1) {
 			count += 1;
 		}
 	});
-	if ( count != 0 ) {
-		el.item(i).innerHTML = count;
-	}
+
+	mines[i] = count;
 	
 });
 
-// console.log(bombs,el);
+
+parent.addEventListener('click', 
+	function(e) {
+		var count = 0;
+		for (const child of children) {
+			if (child == e.target) {
+				e.target.innerHTML = mines[count];
+			}
+			count ++;
+		}
+	}
+);
+
+
+// Place Mines
+// mines.forEach(function(e,i) {
+// 	if (e == -1) {
+// 		el.item(i).innerHTML = "@";
+// 	}
+// });
+
+// 	if ( count != 0 ) {
+// 		el.item(i).innerHTML = count;
+// 	}
+
+console.log(mines,parent,children);
 
 
 
 /*
 
-The algorithm seems to be that a click on a clear square reveals all successive clear squares to a number. A click on a number reveals just that number. A click on a bomb ends the game and reveals the board.
+In the Google algorithm, a click on a clear square reveals all contiguous clear squares to a number. A click on a number reveals just that number. A click on a mine ends the game and reveals the board. The first click seems to be safe. I thought older versions allowed you to click a mine on the first click.
 
 1	2	3	4	5	6	7	8	9
 10	11	12	13	14	15	16	17	18
