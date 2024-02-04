@@ -130,6 +130,22 @@ parent.addEventListener('click',
 	}
 );
 
+/* RightClick for Flag */
+parent.addEventListener('contextmenu', (e) => {
+		e.preventDefault();
+	
+		var index = 0;
+		for (const child of children) {
+			if (child == e.target) {
+				(child.innerHTML == "F") ?
+					child.innerHTML = "" :
+					child.innerHTML = "F";
+			}
+			index ++;
+		}
+	
+});
+
 
 /*
 
