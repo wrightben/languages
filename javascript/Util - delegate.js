@@ -4,12 +4,12 @@ children = parent.children;
 
 parent.addEventListener('click', 
 	function(e) {
-		var count = 0;
+		var index = 0;
 		for (const child of children) {
 			if (child == e.target) {
-				console.log(count);
+				console.log(index);
 			}
-			count ++;
+			index ++;
 		}
 	}
 );
