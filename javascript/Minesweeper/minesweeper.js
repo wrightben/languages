@@ -164,19 +164,7 @@ parent.addEventListener('click',
 					case 0:
 						child.innerHTML = 0;
 						sweep(index);
-						break;
-					case 1:
-						child.innerHTML = 1;
-						break;	
-					case 2:
-						child.innerHTML = 2;
-						break;						
-					case 3:
-						child.innerHTML = 3;
-						break;						
-					case 4:
-						child.innerHTML = 4;
-						break;						
+						break;					
 					default:
 						child.innerHTML = i;
 				}
