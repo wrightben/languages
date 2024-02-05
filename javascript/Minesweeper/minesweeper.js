@@ -139,7 +139,7 @@ var sweep = function(index) {
 var seek = function() {
 	for (var index = 0; index < 81; index++) {
 		var ih = children.item(index).innerHTML;
-		console.log(index, mines[index], swept[index], ih);
+// 		console.log(index, mines[index], swept[index], ih);
 		if ( (ih == 0) && (swept[index] != -1) ) {
 			sweep(index);
 			return; /* One click at a time. */
@@ -194,7 +194,7 @@ parent.addEventListener('contextmenu', (e) => {
 		var index = 0;
 		for (const child of children) {
 			if (child == e.target) {
-				console.log(child);
+// 				console.log(child);
 				(child.innerHTML == "?") ?
 					child.innerHTML = "" :
 					child.innerHTML = "?";
@@ -207,7 +207,10 @@ parent.addEventListener('contextmenu', (e) => {
 
 /*
 
-In the Google algorithm, a click on a clear square reveals all contiguous clear squares to a number. A click on a number reveals just that number. A click on a mine ends the game and reveals the board. The first click seems to be safe. I thought older versions allowed you to click a mine on the first click.
+In the Google algorithm, a click on a clear square reveals all contiguous clear squares to a number. A click on a number reveals just that number. A click on a mine ends the game and reveals the board. The first click seems to be safe. 
+
+One firm decision: I thought older versions allowed you to click a mine on the first click. I like this.
+One glitchy-improvement: Zeros will overwrite question marks when no bombs are present.
 
 1	2	3	4	5	6	7	8	9
 10	11	12	13	14	15	16	17	18
