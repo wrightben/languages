@@ -112,7 +112,7 @@ sets.forEach(function(e,i) {
 	
 	var count = 0;
 	e.forEach(function(_e,_i) {
- 	if (mines[_e - 1]  == -1) {
+ 		if (mines[_e - 1]  == -1) {
 			count += 1;
 		}
 	});
