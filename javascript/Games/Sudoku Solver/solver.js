@@ -135,8 +135,6 @@ var boxes = [
 
 var puzzle = ".1...7856786.15..44...83.1....1.2.6.2...9..7...5..4.2...38..69..2..4.18.19..56.47";
 
-console.log(puzzle[5]);
-
 /*
 	STEPS (to solve):
 		1. Calculate the regexes for each dot
@@ -149,4 +147,70 @@ console.log(puzzle[5]);
 
 */
 
+var regexes = puzzle.split("");
+regexes.forEach(function(e,i) {
+	if (e != ".") {
+		regexes[i] = [parseInt(e)];	
+	} else {
+		regexes[i] = [1,2,3,4,5,6,7,8,9];
+	}
+});
 
+
+var setRegex = function (cell) { // 1-based array
+
+	var re = regexes[cell - 1]; // Cell regex value
+	
+	if (re.length == 1) { return; } // Don't evaluate Cell regex values that are complete (length = 1)
+		
+	var i = intersections[cell - 1];
+	var r = rows[ i[0] - 1 ];
+	var c = columns[ i[1] - 1 ];
+	var b = boxes[ i[2] - 1 ];
+	
+	
+	
+	// Rows, Columns and Boxes
+	r.concat(c,b).forEach(function(e,i) { // 1-based arrays
+		if (e != cell) { // Don't evaluate self from list of intersecting cell indexes
+			
+			// Value of the cell index
+			re = regexes[cell - 1];
+			
+			// Value of the current index in the list of Rows, Columns and Boxes
+			var ci = regexes[e - 1];
+			
+			if (ci.length == 1) { // ci (cell) from Rows, Columns and Boxes has 1 value, filter it from the regex for cell
+				var filter = re.filter( (val) => val != ci[0] );
+				regexes[cell - 1] = filter;
+// 				console.log( cell, e, re, ci, filter );
+			}
+
+		};
+	});
+
+};
+
+// This sets the puzzle up to start grepping
+for (var i = 1; i <= 81; i++) { setRegex(i); }
+
+console.log(JSON.stringify(regexes));
+
+// This could be turned into a two-box HTMl page that lets you type the sentence and then output a CSV file. 	
+/*	
+	PUZZLE:
+	.1...7856786.15..44...83.1....1.2.6.2...9..7...5..4.2...38..69..2..4.18.19..56.47
+	
+	GRID with Regexes:
+
+	[3,9]	[1]	[2,9]	[2,4,9]	[2]	[7]	[8]	[5]	[6]
+	[7]	[8]	[6]	[9]	[1]	[5]	[2,3]	[3]	[4]
+	[4]	[5]	[2,9]	[6]	[8]	[3]	[2,7,9]	[1]	[2,9]
+	[3,8,9]	[3,4,7]	[4,7,8,9]	[1]	[3,7]	[2]	[3,4,5,9]	[6]	[3,5,8,9]
+	[2]	[3,4,6]	[1,4,8]	[3,5]	[9]	[8]	[3,4,5]	[7]	[1,3,5]
+	[3,6,8,9]	[3,6,7]	[5]	[3,7]	[3,6,7]	[4]	[3,9]	[2]	[1,3,8,9]
+	[5]	[4,7]	[3]	[8]	[7]	[1]	[6]	[9]	[2]
+	[6]	[2]	[7]	[3]	[4]	[9]	[1]	[8]	[5]
+	[1]	[9]	[8]	[2]	[5]	[6]	[3]	[4]	[7]
+
+*/
