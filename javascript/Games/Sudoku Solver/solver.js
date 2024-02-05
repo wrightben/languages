@@ -142,7 +142,7 @@ console.log(puzzle[5]);
 		1. Calculate the regexes for each dot
 		2. Seek cells with a regex and do an intersection.
 			- If it yields info, update the regexes of the connected cells.
-				- Maybe use step strategy like Minesweeper?
+				- Use step strategy like Minesweeper?
 
 	STEPS (to generate):
 		1. I really don't know!
