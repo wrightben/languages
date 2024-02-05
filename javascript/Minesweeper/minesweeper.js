@@ -133,7 +133,6 @@ var sweep = function(index) {
 	set.forEach(function(e) {
 		var child = children.item(e - 1);
 		var count = mines[e - 1];
-		var ih = child.innerHTML;
 		child.innerHTML = count;
 	});
 	
