@@ -138,11 +138,14 @@ var puzzle = ".1...7856786.15..44...83.1....1.2.6.2...9..7...5..4.2...38..69..2.
 console.log(puzzle[5]);
 
 /*
-	STEPS:
+	STEPS (to solve):
 		1. Calculate the regexes for each dot
 		2. Seek cells with a regex and do an intersection.
 			- If it yields info, update the regexes of the connected cells.
 				- Maybe use step strategy like Minesweeper?
+
+	STEPS (to generate):
+		1. I really don't know!
 
 */
 
