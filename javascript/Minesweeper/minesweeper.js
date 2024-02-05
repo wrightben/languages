@@ -97,8 +97,8 @@ var setMines = function() {
 setMines();
 
 // getElementsByClassName
-gc = document.getElementsByClassName('grid-container');
-parent = gc.item(0);
+grid = document.getElementsByClassName('grid-container');
+parent = grid.item(0);
 children = parent.children;
 
 // Place Counts
@@ -118,6 +118,37 @@ sets.forEach(function(e,i) {
 });
 
 
+var swept = new Array(81).fill(0);
+var sweep = function(index) {
+
+	swept[index] = -1;
+	
+	var set = sets[index];
+	
+	set.forEach(function(e) {
+		var child = children.item(e - 1);
+		var count = mines[e - 1];
+		var ih = child.innerHTML;
+		child.innerHTML = count;
+	});
+	
+	seek();
+	
+};
+
+var seek = function() {
+	for (var index = 0; index < 81; index++) {
+		var ih = children.item(index).innerHTML;
+		console.log(index, mines[index], swept[index], ih);
+		if ( (ih == 0) && (swept[index] != -1) ) {
+			sweep(index);
+			return; /* One click at a time. */
+		}
+	}
+}
+
+
+
 parent.addEventListener('click', 
 	function(e) {
 		var index = 0;
@@ -127,28 +158,28 @@ parent.addEventListener('click',
 
 				switch (i) {
 					case -1:
-						child.innerHTML = "&#128163"
+						child.innerHTML = "&#128163";
+						parent.style.color = "red";
 						break;
 					case 0:
-						child.innerHTML = 0
+						child.innerHTML = 0;
+						sweep(index);
 						break;
 					case 1:
-						child.innerHTML = 1
+						child.innerHTML = 1;
 						break;	
 					case 2:
-						child.innerHTML = 2
+						child.innerHTML = 2;
 						break;						
 					case 3:
-						child.innerHTML = 3
+						child.innerHTML = 3;
 						break;						
 					case 4:
-						child.innerHTML = 4
+						child.innerHTML = 4;
 						break;						
 					default:
 						child.innerHTML = i;
 				}
-					
-					
 					
 			}
 			index ++;
@@ -163,9 +194,10 @@ parent.addEventListener('contextmenu', (e) => {
 		var index = 0;
 		for (const child of children) {
 			if (child == e.target) {
-				(child.innerHTML == "&#128681;") ?
+				console.log(child);
+				(child.innerHTML == "?") ?
 					child.innerHTML = "" :
-					child.innerHTML = "&#128681;";
+					child.innerHTML = "?";
 			}
 			index ++;
 		}
