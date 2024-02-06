@@ -1,4 +1,4 @@
-var intersections = [[1,1,1],
+var cells = [[1,1,1], // index[row, column, box]
 [1,2,1],
 [1,3,1],
 [1,4,2],
@@ -134,7 +134,7 @@ var setRegex = function (cell) { // 1-based array
 	
 	if (re.length == 1) { return; } // Don't evaluate Cell regex values that are complete (length = 1)
 		
-	var i = intersections[cell - 1];
+	var i = cells[cell - 1];
 	var r = rows[ i[0] - 1 ];
 	var c = columns[ i[1] - 1 ];
 	var b = boxes[ i[2] - 1 ];
@@ -215,7 +215,7 @@ var regexGrep = function (a) { // a is list of integers that corresponds to an i
 var getList = function(a,b) { // a = cell (1-based), b = [0|1|2] for rows,columns,boxes
 
 	var r;
-	var cell = intersections[a-1];
+	var cell = cells[a-1];
 	
 	if (b == 1) {
 		r = columns[cell[b] - 1];
@@ -254,6 +254,8 @@ const filter = require('./filter/filter.js');
 var doIntersection = function (i) {
 	console.log(i);
 	
+	
+	
 	// row
 	var re = regexGrep( getList( 1, 0 ) ).join(""); 
 	var row = filter.getFilteredList( re );
@@ -265,6 +267,17 @@ var doIntersection = function (i) {
 	// box
 	var re = regexGrep( getList( 1, 2 ) ).join(""); 
 	var box = filter.getFilteredList( re );
+	
+	// index, row, column and box
+	// lists of rows, columns, boxes for index
+	
+	// STEPS: 
+	// What position is the cell for this row, column or box
+	// Find the intersection
+	//		is this cell (every number) in the other two lists?
+	// Filter Lists using Union
+	
+	// 	list.filter( (e) => new RegExp(re).test(e) )
 	
 }
 
