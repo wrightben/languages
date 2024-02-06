@@ -164,16 +164,85 @@ for (var i = 1; i <= 81; i++) { setRegex(i); }
 
 
 var tsvPuzzle = function () {
-	return [
-		puzzles.slice(0,9)
-	];
+
+	var _ = puzzle.split("");
+	var r = [];
+	
+	for (var i = 0, j = i; i < 81; i += 9, j = i) {
+		r.push([_[j],_[j+=1],_[j+=1],_[j+=1],_[j+=1],_[j+=1],_[j+=1],_[j+=1],_[j+=1]].join("\t"));
+	}
+	
+	return r;
+
 }
 
 var tsvRegexes = function() {
+	
+	var r = [];
+	var _ = regexes.slice();
+	
+	for (var i = 0, j = i; i < 81; i += 9, j = i) {
+		r.push([
+			"["+_[j].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]",
+			"["+_[j+=1].join("")+"]"
+		].join("\t"));
+	}
+	
+	return r;
+	
+}
 
+var regexGrep = function (a) { // a is list of integers that corresponds to an index from rows, columns or boxes
+	
+	var r = [];
+	
+	a.forEach(function(e,i) {
+		r.push("["+regexes[e - 1].join("")+"]");
+	});
+	
+	return r;
+	
+}
+
+var getList = function(a,b) { // a = cell (1-based), b = [0|1|2] for rows,columns,boxes
+
+	var r;
+	var cell = intersections[a-1];
+	
+	if (b == 1) {
+		r = columns[cell[b] - 1];
+	} else if (b == 2) {
+		r = boxes[cell[b] - 1];
+	} else {
+		r = rows[cell[b] -1];
+	}
+	
+	return r;
 }
 
 // List regexes
 // console.log(JSON.stringify(regexes));
 
-console.log(tsvPuzzle())
+console.log(tsvPuzzle().join("\n"))
+console.log(tsvRegexes().join("\n"))
+
+
+// EXAMPLES:
+// Example: Get row list for cell 1
+// console.log( getList( 1, 0 ) );
+
+// Example: Get box list for cell 1
+// console.log( getList( 1, 2 ) );
+
+// Example: Get column list for cell 1
+// console.log( getList( 1, 1 ) );
+
+// Example: Get the regexGrep for a list
+console.log( regexGrep( getList( 1, 2 ) ).join("") );
