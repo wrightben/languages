@@ -246,5 +246,5 @@ console.log(tsvRegexes().join("\n"))
 // Example: Get box list for cell 1
 // console.log( getList( 1, 2 ) );
 
-// Example: Get the regexGrep for a list
+// Example: Get the regexGrep using the box list for cell 1
 // console.log( regexGrep( getList( 1, 2 ) ).join("") );
