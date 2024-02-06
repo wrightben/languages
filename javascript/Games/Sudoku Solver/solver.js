@@ -156,7 +156,6 @@ regexes.forEach(function(e,i) {
 	}
 });
 
-
 var setRegex = function (cell) { // 1-based array
 
 	var re = regexes[cell - 1]; // Cell regex value
@@ -167,7 +166,6 @@ var setRegex = function (cell) { // 1-based array
 	var r = rows[ i[0] - 1 ];
 	var c = columns[ i[1] - 1 ];
 	var b = boxes[ i[2] - 1 ];
-	
 	
 	
 	// Rows, Columns and Boxes
@@ -191,12 +189,20 @@ var setRegex = function (cell) { // 1-based array
 
 };
 
-// This sets the puzzle up to start grepping
+// setRegex creates the array of regexes; Grepping is now possible.
 for (var i = 1; i <= 81; i++) { setRegex(i); }
 
 console.log(JSON.stringify(regexes));
 
-// This could be turned into a two-box HTMl page that lets you type the sentence and then output a CSV file. 	
+/*
+	See: ./filter/, ./extraneous -
+	puzzle helper.numbers
+	filter.sh
+*/
+
+
+
+
 /*	
 	PUZZLE:
 	.1...7856786.15..44...83.1....1.2.6.2...9..7...5..4.2...38..69..2..4.18.19..56.47
