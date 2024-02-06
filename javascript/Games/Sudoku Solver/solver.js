@@ -235,14 +235,15 @@ console.log(tsvRegexes().join("\n"))
 
 
 // EXAMPLES:
+
 // Example: Get row list for cell 1
 // console.log( getList( 1, 0 ) );
-
-// Example: Get box list for cell 1
-// console.log( getList( 1, 2 ) );
 
 // Example: Get column list for cell 1
 // console.log( getList( 1, 1 ) );
 
+// Example: Get box list for cell 1
+// console.log( getList( 1, 2 ) );
+
 // Example: Get the regexGrep for a list
-console.log( regexGrep( getList( 1, 2 ) ).join("") );
+// console.log( regexGrep( getList( 1, 2 ) ).join("") );
