@@ -1,5 +1,4 @@
 ### Files
-- ./puzzle helper/puzzle helper.txt: used to type a puzzle and create a grid for "puzzle helper.numbers"
 - ./puzzle helper/puzzle helper.numbers: Demonstrates how the puzzle looks in memory; Visual aid
 - ./solver.js: creates the regex list (and may eventually solve a puzzle)
 

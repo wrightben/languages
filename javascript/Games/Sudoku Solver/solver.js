@@ -162,5 +162,18 @@ var setRegex = function (cell) { // 1-based array
 // setRegex creates the array of regexes; Grepping is now possible.
 for (var i = 1; i <= 81; i++) { setRegex(i); }
 
+
+var tsvPuzzle = function () {
+	return [
+		puzzles.slice(0,9)
+	];
+}
+
+var tsvRegexes = function() {
+
+}
+
 // List regexes
-console.log(JSON.stringify(regexes));
+// console.log(JSON.stringify(regexes));
+
+console.log(tsvPuzzle())
