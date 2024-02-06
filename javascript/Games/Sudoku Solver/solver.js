@@ -251,15 +251,32 @@ console.log(tsvRegexes().join("\n"))
 
 const filter = require('./filter/filter.js');
 
-// row
-var re = regexGrep( getList( 1, 0 ) ).join(""); 
-console.log( filter.getFilteredList( re ) );
+var doIntersection = function (i) {
+	console.log(i);
+	
+	// row
+	var re = regexGrep( getList( 1, 0 ) ).join(""); 
+	var row = filter.getFilteredList( re );
 
-// column
-var re = regexGrep( getList( 1, 1 ) ).join(""); 
-console.log( filter.getFilteredList( re ) );
+	// column
+	var re = regexGrep( getList( 1, 1 ) ).join(""); 
+	var column = filter.getFilteredList( re );
 
-// box
-var re = regexGrep( getList( 1, 2 ) ).join(""); 
-console.log( filter.getFilteredList( re ) );
+	// box
+	var re = regexGrep( getList( 1, 2 ) ).join(""); 
+	var box = filter.getFilteredList( re );
+	
+}
 
+var sweep = function() {
+	for (var i = 1; i <= 81; i++) {
+		var re = regexes[i - 1];
+		if (re.length != 1) {
+			doIntersection(i);
+			return; // Step-by-step
+		};
+	};
+};
+
+
+sweep();
