@@ -8,6 +8,6 @@ A sudoku solution doesn't excite me, though I enjoyed writing the functions. It 
 > ./filter/filter.sh: greps a cell's row, column and box
 
 > [!NOTE]
-> ./extraneous - puzzle helper/puzzle helper.numbers: Visual aid of the puzzle grid using the puzzle, the regexes and the cell indicies. <br />
+> ./extraneous - puzzle helper/puzzle helper.numbers: Visual aid of the puzzle grid using the puzzle, the regexes and the cell indicies. Use solver.js to create the data.<br />
 > ./extraneous - rows columns boxes/intersections.js: creates the arrays of the rows, boxes and columns used in the other files. It's not needed anymore, but it might be useful for parts in the future.
 
