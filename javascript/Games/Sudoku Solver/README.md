@@ -21,7 +21,7 @@ node solver.js
 
 #### Algorithms - Solving
 
-The 3 lists of permutations will sometimes yield a distinct answer for the cell in question. Other times, the 3 lists can be used to whittle each other until a distinct answer for the cell is revealed. **The box intersects with the row and the column at 3 cells; The row and the column intersect at just 1 cell.**
+The 3 lists of permutations will sometimes yield a distinct answer for the cell in question. Other times, the 3 lists can be used to whittle each other until a distinct answer for the cell is revealed. **A box intersects with rows and columns at 3 cells; A row and a column intersect at just 1 cell.**
 
 If list Row, Column or Box contains just 1 number in the cell, the other two lists must be limited to that number in that cell. The shortening lists further reduce the possible numbers in all the cells those lists are connected to.
 
