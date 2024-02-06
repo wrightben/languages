@@ -117,7 +117,7 @@ var boxes = [
 ];
 
 // Left-to-Right, Row-by-Row
-var puzzle = ".68.279.1...91...81.7..3.4.47.2.6....513497...2.87.35..19.6.....3.5....66.5...4.7";
+var puzzle = "7...4958...5.71....9.........7..5...91...7..8...68391...91...6.16.5..3..5.8..4...";
 
 var regexes = puzzle.split("");
 regexes.forEach(function(e,i) {
@@ -327,9 +327,8 @@ var doIntersection = function (cell_index) { // 1-based
 	console.log(tsvRegexes().join("\n"))
 	
 	// This process will continue until all values are set or it breaks.
-	sweep();
+// 	sweep();
 	
-	// 	list.filter( (e) => new RegExp(re).test(e) )
 	
 }
 
