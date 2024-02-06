@@ -315,8 +315,8 @@ var doIntersection = function (cell_index) { // 1-based
 	
 	console.log("Intersection for cell ", cell_index, " is ", intersection);	
 	
-	// One value, set it
-	if (intersection.length == 1) {
+
+	if ( regexes[cell_index -1].toString() != intersection.toString() ) {
 		console.log("Rewriting regex for ", cell_index, ' to ', intersection);
 		regexes[cell_index - 1] = intersection;	
 	}
@@ -326,13 +326,14 @@ var doIntersection = function (cell_index) { // 1-based
 	
 	console.log(tsvRegexes().join("\n"))
 	
-	// This process will continue until all values are set or it breaks.
-// 	sweep();
-	
+	return intersection.length;
 	
 }
 
 var sweep = function() {
+	
+	var repeat = false;
+
 	for (var i = 1; i <= 81; i++) {
 	
 		var re = regexes[i - 1];
@@ -340,11 +341,17 @@ var sweep = function() {
 		if (re.length != 1) {
 			console.log("\n\n\n\n");
 			console.log("Sweep of cell_index ", i, " with regex ", re);
-			doIntersection(i);
-			return; // Step-by-step
+			var l = doIntersection(i);
+
+			if (l > 1) { repeat = true; }
 		};
 		
 	};
+	
+	if (repeat == true) { sweep(); }
+	
+	// Plenty of optimizations for this, but it seems to solve medium-difficulty puzzles at Sudoku.com
+	
 };
 
 
