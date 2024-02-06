@@ -1,0 +1,2 @@
+> [!NOTE]
+> In the Google algorithm, a click on a clear square reveals all contiguous clear squares to a number. A click on a number reveals just that number. A click on a mine ends the game and reveals the board. The first click seems to be safe. I thought older versions allowed you to click a mine on the first click. I like this. Zeros will overwrite question marks when no bombs are present.
