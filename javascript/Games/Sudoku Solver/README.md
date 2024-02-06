@@ -13,4 +13,4 @@ A sudoku solution doesn't excite me, though I enjoyed writing the functions. It 
 > ./extraneous - rows columns boxes/intersections.js: creates the arrays of the rows, boxes and columns used in the other files. It's not needed anymore, but it might be useful for parts in the future.
 
 > [!NOTE]
-> Creating a sudoku might use the opposite approach. Starting with 81 lists of [1..9], randomly select a number and then remove it from all lists in the rows, columns and boxes. Iterate over the shortest lists for each successive choice. Numbers have to be removed to create a puzzle. I'm not sure if the blank numbers can be chosen from the final steps of the generative process.
+> Creating a sudoku might use the opposite approach. Starting with 81 lists of [1..9], randomly select a number and then remove it from all lists in the intersecting row, column and box. Iterate over the shortest lists for each successive choice. Numbers have to be removed to create a puzzle. I'm not sure if the blank numbers can be chosen from the final steps of the generative process.
