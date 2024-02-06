@@ -11,8 +11,7 @@ cat List.txt | grep -e "[6][4][29][3589][135][1389][2][5][7]"
 echo "Box"
 cat List.txt | grep -e "[8][5][6][23][3][4][279][1][29]"
 
-# Replace space and commas
-# ((\s|\n)+|,)
+# ALGORITHM
 
 # The 3 lists of permutations will sometimes yield a distinct answer for the cell in question. Other times, the 3 lists can be used to whittle each other until a distinct answer for the cell is revealed.
 
