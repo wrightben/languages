@@ -1,13 +1,15 @@
 ### SUDOKU
 
+A sudoku solution doesn't excite me, though I enjoyed writing the functions. It might be nice to have a sudoku solver to test generated puzzles. I wonder if there are any valid puzzles that cannot be solved using this algorithm. If sudokus are your work or hobby, send me your thoughts.
+
+#### Use and Files
+
 ```
 node solver.js
 ```
 
 ./solver.js: creates the regex list (and may eventually solve a puzzle) <br />
 ./filter/filter.js: greps a list (row, column or box) regexp from the list of 9!
-
-A sudoku solution doesn't excite me, though I enjoyed writing the functions. It might be nice to have a sudoku solver to test generated puzzles. I wonder if there are any valid puzzles that cannot be solved using this algorithm. If sudokus are your work or hobby, send me your thoughts.
 
 
 #### Extraneous
