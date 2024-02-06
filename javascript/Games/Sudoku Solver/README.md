@@ -3,12 +3,13 @@
 A sudoku solution doesn't excite me, though I enjoyed writing the functions. It might be nice to have a sudoku solver to test generated puzzles. I wonder if there are any valid puzzles that cannot be solved using this algorithm. If sudokus are your work or hobby, send me your thoughts.
 
 
-
-#### Files
-
 > [!IMPORTANT]
 > ./solver.js: creates the regex list (and may eventually solve a puzzle) <br />
 > ./filter/filter.js: greps a list (row, column or box) regexp from the list of 9!
+
+
+
+#### Extraneous
 
 ./extraneous - puzzle helper/puzzle helper.numbers: Visual aid of the puzzle grid using the puzzle, the regexes and the cell indicies. Use solver.js to create the data.
 
