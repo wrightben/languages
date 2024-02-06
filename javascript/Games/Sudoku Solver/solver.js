@@ -134,10 +134,10 @@ var setRegex = function (cell) { // 1-based array
 	
 	if (re.length == 1) { return; } // Don't evaluate Cell regex values that are complete (length = 1)
 		
-	var i = cells[cell - 1];
-	var r = rows[ i[0] - 1 ];
-	var c = columns[ i[1] - 1 ];
-	var b = boxes[ i[2] - 1 ];
+	var cell_array = cells[cell - 1];
+	var r = rows[ cell_array[0] - 1 ];
+	var c = columns[ cell_array[1] - 1 ];
+	var b = boxes[ cell_array[2] - 1 ];
 	
 	
 	// Rows, Columns and Boxes
@@ -253,28 +253,27 @@ const filter = require('./filter/filter.js');
 
 var doIntersection = function (cell_index) { // 1-based
 
-	// Switch to 0-based
-	var r = cells[cell_index-1][0] - 1;
-	var c = cells[cell_index-1][1] - 1;
-	var b = cells[cell_index-1][2] - 1;		
+	// 1-based
+	var r = cells[cell_index-1][0];
+	var c = cells[cell_index-1][1];
+	var b = cells[cell_index-1][2];	
+	var bp = boxes[b-1].indexOf(cell_index);	
 
-	console.log("\n\n\ndoIntersection for cell ",cell_index);
-	console.log(cell_index, r, c, b);	
+	console.log("\ndoIntersection for cell ",cell_index);
+	console.log('cell ', cell_index, ' r c b bp', r, c, b, bp);	
 	
 	// row
-	var re = regexGrep( getList( 1, 0 ) ).join(""); 
+	var re = regexGrep( getList( cell_index, 0 ) ).join(""); 
 	var row = filter.getFilteredList( re );
 
 	// column
-	var re = regexGrep( getList( 1, 1 ) ).join(""); 
+	var re = regexGrep( getList( cell_index, 1 ) ).join(""); 
 	var column = filter.getFilteredList( re );
 
 	// box
-	var re = regexGrep( getList( 1, 2 ) ).join(""); 
+	var re = regexGrep( getList( cell_index, 2 ) ).join(""); 
 	var box = filter.getFilteredList( re );
 	
-	// index, row, column and box
-	// lists of rows, columns, boxes for index
 	
 	/*
 		STEPS: 
@@ -291,16 +290,15 @@ var doIntersection = function (cell_index) { // 1-based
 	
 	var aggRow = new Array(9).fill(0);
 	row.forEach(function(e,i) {
-		aggRow[e[c] - 1] = 1;
+		aggRow[e[c - 1]-1] = 1;
 	})
 
 	var aggColumn = new Array(9).fill(0);
 	column.forEach(function(e,i) {
-		aggColumn[e[r] - 1] = 1;
+		aggColumn[e[r - 1] - 1] = 1;
 	})
 
 	var aggBox = new Array(9).fill(0);
-	var bp = boxes[b].indexOf(cell_index);
 	box.forEach(function(e,i) {
 		aggBox[e[bp] - 1] = 1;
 	})
@@ -314,14 +312,15 @@ var doIntersection = function (cell_index) { // 1-based
 			intersection.push(i+1);
 		}
 	}
-	console.log("Intersection found for cell ", cell_index, " at ", intersection);
+	
+	console.log("Intersection for cell ", cell_index, " is ", intersection);	
 	
 	// One value, set it
 	if (intersection.length == 1) {
-		console.log("Rewriting intersecting regexes");
-		regexes[cell_index - 1] = intersection;
+		console.log("Rewriting regex for ", cell_index, ' to ', intersection);
+		regexes[cell_index - 1] = intersection;	
 	}
-	
+
 	// Rewrite the regexes
 	for (var i = 1; i <= 81; i++) { setRegex(i); }
 	
@@ -336,11 +335,16 @@ var doIntersection = function (cell_index) { // 1-based
 
 var sweep = function() {
 	for (var i = 1; i <= 81; i++) {
+	
 		var re = regexes[i - 1];
+		
 		if (re.length != 1) {
+			console.log("\n\n\n\n");
+			console.log("Sweep of cell_index ", i, " with regex ", re);
 			doIntersection(i);
 			return; // Step-by-step
 		};
+		
 	};
 };
 
