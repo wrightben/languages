@@ -251,10 +251,15 @@ console.log(tsvRegexes().join("\n"))
 
 const filter = require('./filter/filter.js');
 
-var doIntersection = function (i) {
-	console.log(i);
-	
-	
+var doIntersection = function (cell_index) { // 1-based
+
+	// Switch to 0-based
+	var r = cells[cell_index-1][0] - 1;
+	var c = cells[cell_index-1][1] - 1;
+	var b = cells[cell_index-1][2] - 1;		
+
+	console.log("\n\n\ndoIntersection for cell ",cell_index);
+	console.log(cell_index, r, c, b);	
 	
 	// row
 	var re = regexGrep( getList( 1, 0 ) ).join(""); 
@@ -271,11 +276,59 @@ var doIntersection = function (i) {
 	// index, row, column and box
 	// lists of rows, columns, boxes for index
 	
-	// STEPS: 
-	// What position is the cell for this row, column or box
-	// Find the intersection
-	//		is this cell (every number) in the other two lists?
-	// Filter Lists using Union
+	/*
+		STEPS: 
+
+		What position is the cell for this row, column or box:
+			- column for the row
+			- row for the column
+			- boxes[b].indexOf(i) for the box
+		Find the intersection
+			is this cell (every number) in the other two lists?
+		Filter Lists using intersection
+		
+	*/
+	
+	var aggRow = new Array(9).fill(0);
+	row.forEach(function(e,i) {
+		aggRow[e[c] - 1] = 1;
+	})
+
+	var aggColumn = new Array(9).fill(0);
+	column.forEach(function(e,i) {
+		aggColumn[e[r] - 1] = 1;
+	})
+
+	var aggBox = new Array(9).fill(0);
+	var bp = boxes[b].indexOf(cell_index);
+	box.forEach(function(e,i) {
+		aggBox[e[bp] - 1] = 1;
+	})
+
+	console.log(row,column,box);
+	console.log([aggRow.join("\t"),aggColumn.join("\t"),aggBox.join("\t")].join("\n"));
+	
+	var intersection = [];
+	for (var i = 0; i < 9; i++) {
+		if ( (aggRow[i] == 1) && (aggColumn[i] == 1) && (aggBox[i] == 1) ) {
+			intersection.push(i+1);
+		}
+	}
+	console.log("Intersection found for cell ", cell_index, " at ", intersection);
+	
+	// One value, set it
+	if (intersection.length == 1) {
+		console.log("Rewriting intersecting regexes");
+		regexes[cell_index - 1] = intersection;
+	}
+	
+	// Rewrite the regexes
+	for (var i = 1; i <= 81; i++) { setRegex(i); }
+	
+	console.log(tsvRegexes().join("\n"))
+	
+	// This process will continue until all values are set or it breaks.
+	sweep();
 	
 	// 	list.filter( (e) => new RegExp(re).test(e) )
 	
