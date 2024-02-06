@@ -231,8 +231,8 @@ var getList = function(a,b) { // a = cell (1-based), b = [0|1|2] for rows,column
 // List regexes
 // console.log(JSON.stringify(regexes));
 
-console.log(tsvPuzzle().join("\n"))
-console.log(tsvRegexes().join("\n"))
+//OUTPUT-console.log(tsvPuzzle().join("\n"))
+//OUTPUT-console.log(tsvRegexes().join("\n"))
 
 
 // EXAMPLES:
@@ -259,8 +259,8 @@ var doIntersection = function (cell_index) { // 1-based
 	var b = cells[cell_index-1][2];	
 	var bp = boxes[b-1].indexOf(cell_index);	
 
-	console.log("\ndoIntersection for cell ",cell_index);
-	console.log('cell ', cell_index, ' r c b bp', r, c, b, bp);	
+	//OUTPUT-console.log("\ndoIntersection for cell ",cell_index);
+	//OUTPUT-console.log('cell ', cell_index, ' r c b bp', r, c, b, bp);	
 	
 	// row
 	var re = regexGrep( getList( cell_index, 0 ) ).join(""); 
@@ -303,8 +303,8 @@ var doIntersection = function (cell_index) { // 1-based
 		aggBox[e[bp] - 1] = 1;
 	})
 
-	console.log(row,column,box);
-	console.log([aggRow.join("\t"),aggColumn.join("\t"),aggBox.join("\t")].join("\n"));
+	//OUTPUT-console.log(row,column,box);
+	//OUTPUT-console.log([aggRow.join("\t"),aggColumn.join("\t"),aggBox.join("\t")].join("\n"));
 	
 	var intersection = [];
 	for (var i = 0; i < 9; i++) {
@@ -313,18 +313,18 @@ var doIntersection = function (cell_index) { // 1-based
 		}
 	}
 	
-	console.log("Intersection for cell ", cell_index, " is ", intersection);	
+	//OUTPUT-console.log("Intersection for cell ", cell_index, " is ", intersection);	
 	
 
 	if ( regexes[cell_index -1].toString() != intersection.toString() ) {
-		console.log("Rewriting regex for ", cell_index, ' to ', intersection);
+		//OUTPUT-console.log("Rewriting regex for ", cell_index, ' to ', intersection);
 		regexes[cell_index - 1] = intersection;	
 	}
 
 	// Rewrite the regexes
 	for (var i = 1; i <= 81; i++) { setRegex(i); }
 	
-	console.log(tsvRegexes().join("\n"))
+	//OUTPUT-console.log(tsvRegexes().join("\n"))
 	
 	return intersection.length;
 	
@@ -339,8 +339,8 @@ var sweep = function() {
 		var re = regexes[i - 1];
 		
 		if (re.length != 1) {
-			console.log("\n\n\n\n");
-			console.log("Sweep of cell_index ", i, " with regex ", re);
+			//OUTPUT-console.log("\n\n\n\n");
+			//OUTPUT-console.log("Sweep of cell_index ", i, " with regex ", re);
 			var l = doIntersection(i);
 
 			if (l > 1) { repeat = true; }
@@ -356,3 +356,8 @@ var sweep = function() {
 
 
 sweep();
+
+// For debug or amusement, search-replace lines with "//OUTPUT-"
+
+// OUTPUT SOLVED PUZZLE
+console.log(tsvRegexes().join("\n"))
