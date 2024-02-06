@@ -149,10 +149,9 @@ var setRegex = function (cell) { // 1-based array
 			// Value of the current index in the list of Rows, Columns and Boxes
 			var ci = regexes[e - 1];
 			
-			if (ci.length == 1) { // ci (cell) from Rows, Columns and Boxes has 1 value, filter it from the regex for cell
-				var filter = re.filter( (val) => val != ci[0] );
-				regexes[cell - 1] = filter;
-// 				console.log( cell, e, re, ci, filter );
+			// IF ci (cell) from Rows, Columns and Boxes has 1 value, filter its value from the regex for cell
+			if (ci.length == 1) {
+				regexes[cell - 1] = re.filter( (val) => val != ci[0] );
 			}
 
 		};
