@@ -3,6 +3,10 @@ A sudoku solution doesn't excite me, though I enjoyed writing the functions. It 
 
 #### Files
 
+- Test
+- Test
+- Test
+
 	File - ./solver.js: creates the regex list (and may eventually solve a puzzle)
 	File - ./filter/filter.sh: greps a cell's row, column and box
 	File - ./extraneous - puzzle helper/puzzle helper.numbers: Visual aid of the puzzle grid using the puzzle, the regexes and the cell indicies.
