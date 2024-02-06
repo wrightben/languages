@@ -1,5 +1,5 @@
 ### Solving
-A sudoku solution doesn't excite me, though I enjoyed writing the functions. It might be nice to have a sudoku solver to test generated puzzles. I wonder if there are any valid puzzles that cannot be solved using this algorithm.
+A sudoku solution doesn't excite me, though I enjoyed writing the functions. It might be nice to have a sudoku solver to test generated puzzles. I wonder if there are any valid puzzles that cannot be solved using this algorithm. If this is the kind of thing you're into, send me your thoughts.
 
 ### Files
 - ./solver.js: creates the regex list (and may eventually solve a puzzle)
