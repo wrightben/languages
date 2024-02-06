@@ -248,3 +248,18 @@ console.log(tsvRegexes().join("\n"))
 
 // Example: Get the regexGrep using the box list for cell 1
 // console.log( regexGrep( getList( 1, 2 ) ).join("") );
+
+const filter = require('./filter/filter.js');
+
+// row
+var re = regexGrep( getList( 1, 0 ) ).join(""); 
+console.log( filter.getFilteredList( re ) );
+
+// column
+var re = regexGrep( getList( 1, 1 ) ).join(""); 
+console.log( filter.getFilteredList( re ) );
+
+// box
+var re = regexGrep( getList( 1, 2 ) ).join(""); 
+console.log( filter.getFilteredList( re ) );
+
