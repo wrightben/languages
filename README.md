@@ -1,3 +1,3 @@
 ### Programming Languages
 
-I associate learning a new programming language with misery and suffering.
+I associate learning a new programming language with suffering and deprivation.
