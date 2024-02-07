@@ -30,11 +30,7 @@ javascript: (function() {
 		- Guessing when the reduction occurs is unlikely.
 		- No one cares what your password is.
 
-	- Weighted numbers can be imitated like this:
-
-		w = [1,1,1,2,2,3,3,3,3,4][Math.floor(Math.random() * 10)] // 30% = 1, 20% = 2, 40% = 3, 10% = 4
-
 	- The 4 classes (UC, LC, # and $) could be weighted equally
 		- Step 1: Choose random (1-4)
-		- Step 2: Choose random from class.
+		- Step 2: Choose random from class
 */
