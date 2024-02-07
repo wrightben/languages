@@ -2,10 +2,12 @@ javascript: (function() {
 	var x = prompt("How many characters? (Minimum 3)");
 	
 	var req1 = Math.floor(Math.random() * 3) + 1;
-	var special = "!@$";
-	var numeric = "123456789";
+	var special	= "!@$";
+	var numeric	= "123456789";
+	var alphaUC	= "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	var alphaLC = "abcdefghijklmnopqrstuvwxyz";
 	var password = [];
-	var characters = numeric + "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" + special;
+	var characters = numeric + alphaLC + alphaUC + special;
 
 	/* Create a password of x-length; Each character can be any of the 64 */
 	for (var i = 0; i < x; i++) {
@@ -23,18 +25,16 @@ javascript: (function() {
 	alert(password.join(""));
 	
 })();
+/*
+	- Reduction is possible (UC or LC, for example) if each character is chosen from a complete list of 64.
+		- Guessing when the reduction occurs is unlikely.
+		- No one cares what your password is.
 
-/* 
-	- Reduction is possible (UC or LC, for example) if each character is chosen from a complete list of 64. But guessing when the reduction occurs is unlikely.
-	
 	- Weighted numbers can be imitated like this:
-		1:1,2:1,3:1 {30% = 1};
-		4:2,5:2 {20% = 2};
-		6:3,7:3,8:3,9:3 {40% = 3}; 
-		10:4 {10% = 5}
-		
+
+		w = [1,1,1,2,2,3,3,3,3,4][Math.floor(Math.random() * 10)] // 30% = 1, 20% = 2, 40% = 3, 10% = 4
+
 	- The 4 classes (UC, LC, # and $) could be weighted equally
 		- Step 1: Choose random (1-4)
 		- Step 2: Choose random from class.
-		
 */
