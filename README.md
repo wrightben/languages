@@ -1,5 +1,5 @@
 ### Programming Languages
 
-I associate learning a new programming language with suffering. I don't believe anyone other than me would ever look at this repo, but it's symbolic of a lifetime of virtual imprisonment in America. I sat in a room learning programming languages and didn't have friends or literally anything else.
+I associate learning a new programming language with suffering. I sat in various rooms learning programming languages for years. I didn't earn money. I didn't buy anything. I did watch some movies.
 
 No one calls it The Truman Show to my face.
