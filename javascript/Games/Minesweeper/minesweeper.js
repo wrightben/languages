@@ -164,7 +164,7 @@ parent.addEventListener('click',
 
 				switch (i) {
 					case -1:
-						child.innerHTML = "&#128163";
+						child.innerHTML = "B";
 						parent.style.color = "red";
 						break;
 					case 0:
