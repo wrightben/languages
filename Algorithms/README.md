@@ -3,6 +3,7 @@
 #### Favorite Examples
 
 - [Robot Movements](https://github.com/wrightben/languages/blob/main/Algorithms/Codeeval/code/robotMovements.js)
+- $$ p * (1.01^3) $$
 - [Texas Hold'em](https://github.com/wrightben/texas-holdem/blob/master/texas-holdem.js)
 - [Word Search](https://github.com/wrightben/languages/blob/main/python/word%20search/word_search.py)
 - [Sequential Integers](https://github.com/wrightben/languages/tree/main/Algorithms/HackerRank%20-%20Contiguous%20-%20Bloomberg)
