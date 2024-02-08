@@ -117,7 +117,7 @@ var boxes = [
 ];
 
 // Left-to-Right, Row-by-Row
-var puzzle = "7...4958...5.71....9.........7..5...91...7..8...68391...91...6.16.5..3..5.8..4...";
+var puzzle = "..8.93.72......3...1...6.....4...5......3.8..6....9.43..7.2..948..7............5.";
 
 var regexes = puzzle.split("");
 regexes.forEach(function(e,i) {
@@ -231,8 +231,8 @@ var getList = function(a,b) { // a = cell (1-based), b = [0|1|2] for rows,column
 // List regexes
 // console.log(JSON.stringify(regexes));
 
-//OUTPUT-console.log(tsvPuzzle().join("\n"))
-//OUTPUT-console.log(tsvRegexes().join("\n"))
+//OUTPUT-console.log(tsvPuzzle().join("\n"));
+//OUTPUT-console.log(tsvRegexes().join("\n"));
 
 
 // EXAMPLES:
@@ -311,7 +311,7 @@ var doIntersection = function (cell_index) { // 1-based
 		if ( (aggRow[i] == 1) && (aggColumn[i] == 1) && (aggBox[i] == 1) ) {
 			intersection.push(i+1);
 		}
-	}
+	};
 	
 	//OUTPUT-console.log("Intersection for cell ", cell_index, " is ", intersection);	
 	
@@ -319,7 +319,7 @@ var doIntersection = function (cell_index) { // 1-based
 	if ( regexes[cell_index -1].toString() != intersection.toString() ) {
 		//OUTPUT-console.log("Rewriting regex for ", cell_index, ' to ', intersection);
 		regexes[cell_index - 1] = intersection;	
-	}
+	};
 
 	// Rewrite the regexes
 	for (var i = 1; i <= 81; i++) { setRegex(i); }
@@ -354,10 +354,12 @@ var sweep = function() {
 	
 };
 
+// Output for Puzzle Helper
+// console.log(tsvPuzzle().join("\n"));
+// console.log(tsvRegexes().join("\n"));
 
+// Solve Puzzle
 sweep();
+console.log(tsvRegexes().join("\n"))
 
 // For debug or amusement, search-replace lines with "//OUTPUT-"
-
-// OUTPUT SOLVED PUZZLE
-console.log(tsvRegexes().join("\n"))
