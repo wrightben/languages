@@ -1,4 +1,4 @@
-var sets = [ [2,10,11],
+var sets = [ [2,10,11], // Surrounding cells for cells 1..81 (line number)
 	[1,3,10,11,12],
 	[2,4,11,12,13],
 	[3,5,12,13,14],
