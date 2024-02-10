@@ -93,7 +93,7 @@ var mines = new Array(81).fill(0);
 var setMines = function() {
 	count = 10;
 	var i;
-	while (count > 0) {
+	while (count > 0) { // Randomly "deal" mines
 		while (mines[ i ] != 0) {
 			i = Math.floor( Math.random() * 81 );
 		}
@@ -108,10 +108,10 @@ setMines();
 // Place Counts
 sets.forEach(function(e,i) {
 
-	if (mines[i] == -1) { return; }
+	if (mines[i] == -1) { return; } // Mine (Bomb) is already set.
 	
 	var count = 0;
-	e.forEach(function(_e,_i) {
+	e.forEach(function(_e,_i) { // Iterate over this cell's list of surrounding cells and count the mines.
  		if (mines[_e - 1]  == -1) {
 			count += 1;
 		}
@@ -123,17 +123,16 @@ sets.forEach(function(e,i) {
 
 
 
-var swept = new Array(81).fill(0);
+var swept = new Array(81).fill(0); // List of 0-cells that have had their surrounding cells displayed
 var sweep = function(index) {
 
 	swept[index] = -1;
 	
-	var set = sets[index];
+	var s = sets[index];
 	
-	set.forEach(function(e) {
-		var child = children.item(e - 1);
-		var count = mines[e - 1];
-		child.innerHTML = count;
+	s.forEach(function(e) {	 // Iterate over a 0-cell's list of surrounding cells and set the number of mines in those surrounding cells
+		var child = children.item(e - 1); // The HTML element
+		child.innerHTML = mines[e - 1];
 	});
 	
 	seek();
