@@ -54,7 +54,7 @@ console.log( JSON.stringify(ul), ul.length );
 /*
 	Logic Puzzle
 	
-	- A-B-C (The relationship between A-C is implicit.)
+	- B-A-C (The relationship between B-C is implicit.)
 	The initial regular expression filters none of the 576 list elements.
 	There are two kinds of alterations to the initial regular expression.
 		- A known relationship
