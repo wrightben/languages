@@ -1,0 +1,33 @@
+var x = [1234,
+	1243,
+	1324,
+	1342,
+	1423,
+	1432,
+	2134,
+	2143,
+	2314,
+	2341,
+	2413,
+	2431,
+	3124,
+	3142,
+	3214,
+	3241,
+	3412,
+	3421,
+	4123,
+	4132,
+	4213,
+	4231,
+	4312,
+	4321];
+
+var logicBaron = [];
+x.forEach(function(e) {
+	x.forEach(function(f) {
+		logicBaron.push(e.toString()+"-"+f.toString());
+	});
+});
+
+console.log(JSON.stringify(logicBaron), logicBaron.length);
