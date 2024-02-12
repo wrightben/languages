@@ -27,8 +27,6 @@ If list Row, Column or Box contains just 1 number in the cell, the other two lis
 
 There are not 9^81 solved puzzles. Knowing this, it should be possible to determine the solved puzzle by filtering a list of all solved puzzles for the unsolved puzzle. The slight changes to understanding are that there are fewer solved puzzles than ignorance might cause you to believe and that the process for determining and presenting the solved puzzle could be different than iterating over incomplete cells.
 
-Is it possible to get the complete list of solved puzzles? Yes.
-
 #### Algorithms - Generating
 
 Creating a sudoku might use the opposite approach. Starting with 81 lists of [1..9], randomly select a number and then remove it from all lists in the intersecting row, column and box. Iterate over the shortest lists for each successive choice. Numbers have to be removed to create a puzzle. I'm not sure if the blank cells can be ascertained from the final steps of the generative process.
