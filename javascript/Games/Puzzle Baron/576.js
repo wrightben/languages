@@ -66,7 +66,7 @@ console.log( JSON.stringify(ul), ul.length );
 		- two or more things are not related
 		- one thing precedes another
 		
-	Question: Can A-C be extracted and does the reduction of items yield numbers for unknowns? (Is it like Sudoku?)
+	Question: Can B-C be extracted and does the reduction of items yield numbers for unknowns? (Is it like Sudoku?)
 	
 	Would I enjoy writing code that could parse the clues? No.
 
