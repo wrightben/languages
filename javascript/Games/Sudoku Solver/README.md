@@ -25,6 +25,8 @@ The 3 lists of permutations will sometimes yield a distinct answer for the cell 
 
 If list Row, Column or Box contains just 1 number in the cell, the other two lists must be limited to that number in that cell. The shortening lists further reduce the possible numbers in all the cells those lists are connected to.
 
+There are not 9^81 solved puzzles. Knowing this, it should be possible to determine the solved puzzle by filtering a list of all solved puzzles for the unsolved puzzle. The slight changes to understanding are that there are fewer solved puzzles than ignorance might cause you to believe and that the process for determining and presenting the solved puzzle could be different than iterating over incomplete cells.
+
 #### Algorithms - Generating
 
-Creating a sudoku might use the opposite approach. Starting with 81 lists of [1..9], randomly select a number and then remove it from all lists in the intersecting row, column and box. Iterate over the shortest lists for each successive choice. Numbers have to be removed to create a puzzle. I'm not sure if the blank numbers can be chosen from the final steps of the generative process.
+Creating a sudoku might use the opposite approach. Starting with 81 lists of [1..9], randomly select a number and then remove it from all lists in the intersecting row, column and box. Iterate over the shortest lists for each successive choice. Numbers have to be removed to create a puzzle. I'm not sure if the blank cells can be ascertained from the final steps of the generative process.
