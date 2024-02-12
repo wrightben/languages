@@ -7,5 +7,6 @@
 - [Word Search](https://github.com/wrightben/languages/blob/main/python/word%20search/word_search.py)
 - [Sequential Integers](https://github.com/wrightben/languages/tree/main/Algorithms/HackerRank%20-%20Contiguous%20-%20Bloomberg)
 - [Permutation Iterator](https://github.com/wrightben/languages/blob/main/Algorithms/HackerRank%20-%20Bigger%20is%20Greater/incrementer.js)
+- [Password Maker](https://github.com/wrightben/languages/blob/main/javascript/Bookmarklet%20-%20Create%20Password.js)
 - [Minesweeper](https://github.com/wrightben/languages/blob/main/javascript/Games/Minesweeper/minesweeper.js)
 - [Sudoku Solver](https://github.com/wrightben/languages/blob/main/javascript/Games/Sudoku%20Solver/solver.js)
