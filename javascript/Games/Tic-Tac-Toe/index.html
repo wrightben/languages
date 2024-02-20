@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+	<head>
+		<title>Tic-Tac-Toe - wrightben.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand" rel="stylesheet">
+		<style>
+			* {
+				font-size: 24px;
+				font-family: "Quicksand", Helvetica;
+				font-weight: 300;
+				color: #555;
+			}
+			
+			#game {
+				margin: auto;
+				width: 279px;
+				padding: 0;
+				border: none;
+			}
+			
+			h1 {
+				color: rgb(237,237,237);
+			}
+			
+			.grid-container {
+				overflow: auto;
+				width: 285px;
+				color: red;
+				color: #3498DB;
+				border: none;
+			}
+			
+			.grid-item {
+				border: 1px solid rgb(237,237,237);
+				font-family: Quicksand;
+				font-size: 72px;
+				font-weight: 700;
+				color: inherit;
+				text-align: center;
+				width: 90px;
+				height: 90px;
+				float: left;
+				line-height: 80px; /* Vertical-align */
+			}
+		</style>
+	</head>
+	
+	<body>
+	
+		<div id="game">
+			<h1>Tic-Tac-Toe</h1>
+
+			<div class="grid-container">
+				<div class="grid-item">&nbsp;</div>
+				<div class="grid-item">&nbsp;</div>
+				<div class="grid-item">&nbsp;</div>  
+				<div class="grid-item">&nbsp;</div>
+				<div class="grid-item">&nbsp;</div>
+				<div class="grid-item">&nbsp;</div>  
+				<div class="grid-item">&nbsp;</div>
+				<div class="grid-item">&nbsp;</div>
+				<div class="grid-item">&nbsp;</div>
+			</div>
+		</div>
+		<script src="tic-tac-toe.js"></script>
+		
+	</body>
+	
+</html>
