@@ -75,6 +75,7 @@ parent.addEventListener('click', clickHandler);
 	3. Figure out which permutations win and for whom.
 		- The 9-digit permutations in filter.js can be converted to odd-even characters. 
 		- No permutation can be less than 5 characters long.
-		- Winning permutations are usually less than 9 characters. (Does x ever win at 9?)
+		- Winning permutations are usually less than 9 characters.
+			- Does x ever win at 9? (Yes)
 	4. Implement computer player. This is probably the easiest to do since it's so easy to memorize the strategy. The auto player function eliminates the if-else block.
 */
