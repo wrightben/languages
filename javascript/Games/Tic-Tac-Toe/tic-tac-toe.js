@@ -72,10 +72,11 @@ parent.addEventListener('click', clickHandler);
 /*
 	x - When a player "wins", turn the losing letters to rgb(237 237 237). Disable click.
 	x - Store each move in a 9-value array; Create the list of sets for each row, column, diagonal.
-	3. Figure out which permutations win and for whom.
-		- The 9-digit permutations in filter.js can be converted to odd-even characters. 
-		- No permutation can be less than 5 characters long.
-		- Winning permutations are usually less than 9 characters.
-			- Does x ever win at 9? (Yes)
+	x - Figure out which permutations win and for whom.
+		x - The 9-digit permutations in filter.js can be converted to odd-even characters. 
+		x - No permutation can be less than 5 characters long.
+		x - Winning permutations are usually less than 9 characters.
+			x - Does x ever win at 9? (Yes)
 	4. Implement computer player. This is probably the easiest to do since it's so easy to memorize the strategy. The auto player function eliminates the if-else block.
+		- Computer player can be "solved", meaning that for only 9 possible move 
 */
