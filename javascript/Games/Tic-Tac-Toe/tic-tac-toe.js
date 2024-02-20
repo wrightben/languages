@@ -19,11 +19,10 @@ children = parent.children;
 var checkGameStatus = function() {
 
 	sets.find(function(e,i) {
+	
 		var a = game[e[0] - 1], // Convert Cell # into Value
 			b = game[e[1] - 1],
 			c = game[e[2] - 1];
-			
-			console.log(a,b,c);
 			
 		if ((a != -1) && (a == b) && (b == c)) {
 			for (const child of children) {
