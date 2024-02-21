@@ -37,6 +37,8 @@ for (var i = 1; i <= 9; i ++) {
 ```
 28.8%	104544	(First Player Loses)
 58.5%	212256	(First Player Wins)
-12.7%	46080	(Players Draw)	258336	71.2%	(First Player Wins or Draws)
-100.0%	362880		
+12.7%	46080	(Players Draw)
+100.0%	362880
+
+71.2%	258336	(First Player Wins or Draws)
 ```
