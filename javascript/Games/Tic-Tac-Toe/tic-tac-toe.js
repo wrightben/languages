@@ -41,7 +41,7 @@ var checkGameStatus = function() {
 
 
 // Click
-var marker = ["x","o"];
+var marker = ["1","2"];
 var color = ["66 133 244","251 189 5"];
 var index = 1; // Will switch first player to 0.
 
