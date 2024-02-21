@@ -67,6 +67,7 @@ var clickHandler = 	function(e) {
 	
 };
 
+
 parent.addEventListener('click', clickHandler);
 
 /*
@@ -77,6 +78,6 @@ parent.addEventListener('click', clickHandler);
 		x - No permutation can be less than 5 characters long.
 		x - Winning permutations are usually less than 9 characters.
 			x - Does x ever win at 9? (Yes)
-	4. Implement computer player. This is probably the easiest to do since it's so easy to memorize the strategy. The auto player function eliminates the if-else block.
-		- Computer player can be solved: For every move that x can make, o's best move is known.
+	4. Implement computer player.
+		- For every move that x can make, o's best move is known?
 */
