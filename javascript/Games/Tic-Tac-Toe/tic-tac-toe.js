@@ -81,6 +81,8 @@ parent.addEventListener('click', clickHandler);
 	4. Implement computer player (O).
 		- For every move that x can make, o's best move is known?
 		- Can O exploit poor play? Or be defensive if necessary?
-		- Is human-recognized "strategy" (not end state) encoded or determined by the computer?
+			- What indicates these conditions?
+		- Shall human-recognized "strategy" (not end state) be encoded? Or shall it be determined by the computer?
 		- Is it possible, beneficial, or necessary to evaluate every permutation in advance and use those results to achieve the computer-player? (Of course, yes. Calculate it ahead of time and use that.)
+		- How do the responses of groups of players change the perspective on what move should be made? Are there any interesting cases in Tic-Tac-Toe?
 */
