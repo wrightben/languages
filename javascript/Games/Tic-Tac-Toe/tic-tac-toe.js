@@ -16,7 +16,7 @@ parent = grid.item(0);
 children = parent.children;
 
 
-var checkGameStatus = function() {
+var checkGameStatus = function(boole) { // boole = make computer move
 
 	sets.find(function(e,i) {
 	
@@ -32,12 +32,16 @@ var checkGameStatus = function() {
 				}
 			};
 			parent.removeEventListener('click',clickHandler);
+			boole = false;
 			return;
 		}
 		
 	});
+	
+	if (boole == true) { doComputerMove(); }
 
 };
+
 
 
 // Click
@@ -45,7 +49,7 @@ var marker = ["1","2"];
 var color = ["66 133 244","251 189 5"];
 var index = 1; // Will switch first player to 0.
 
-var clickHandler = 	function(e) {
+var clickHandler = 	function(e, boole=true) {
 	var cell = 0; //zero-based
 	
 	for (const child of children) {
@@ -57,7 +61,7 @@ var clickHandler = 	function(e) {
 				child.innerHTML = marker[index];
 				child.style.color = "rgb("+color[index]+")";
 				game[cell] = index;
-				checkGameStatus();
+				checkGameStatus(boole);
 				return;
 			}
 
@@ -78,11 +82,38 @@ parent.addEventListener('click', clickHandler);
 		x - No permutation can be less than 5 characters long.
 		x - Winning permutations are usually less than 9 characters.
 			x - Does x ever win at 9? (Yes)
-	4. Implement computer player (O).
-		- For every move that x can make, o's best move is known?
-		- Can O exploit poor play? Or be defensive if necessary?
-			- What indicates these conditions?
-		- Shall human-recognized "strategy" (not end state) be encoded? Or shall it be determined by the computer?
-		- Is it possible, beneficial, or necessary to evaluate every permutation in advance and use those results to achieve the computer-player? (Of course, yes. Calculate it ahead of time and use that.)
-		- How do the responses of groups of players change the perspective on what move should be made? Are there any interesting cases in Tic-Tac-Toe?
+	x. Implement computer player (O).
+		- Implement a non-random algorithm (O)
+			- For every move that x can make, o's best move is known?
+			- Can O exploit poor play? Or be defensive if necessary?
+				- What indicates these conditions?
+			- Shall human-recognized "strategy" (not end state) be encoded? Or shall it be determined by the computer?
+			- Is it possible, beneficial, or necessary to evaluate every permutation in advance and use those results to achieve the computer-player? (Of course, yes. Calculate it ahead of time and use that.)
+			- How do the responses of groups of players change the perspective on what move should be made? Are there any interesting cases in Tic-Tac-Toe?
 */
+
+
+
+
+
+var doComputerMove = function() {
+
+	// Select a RANDOM move (not an algorithm move)
+	var random = [];
+	for (var i = 0; i < 9; i++) {
+		if (game[i] == -1) {
+			random.push(i);
+		};
+	};
+	
+	var item = random[ Math.floor(Math.random() * random.length) ];
+	
+	// DEBUG
+	// console.log(random, item, children, children.item(item) );
+	
+	// Implement Move
+	setTimeout(function() {
+		clickHandler( { "target":children.item(item) }, false ); // false = don't do a computer move after
+	}, 500);
+
+};
