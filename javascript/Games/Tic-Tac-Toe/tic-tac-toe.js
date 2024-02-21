@@ -78,6 +78,9 @@ parent.addEventListener('click', clickHandler);
 		x - No permutation can be less than 5 characters long.
 		x - Winning permutations are usually less than 9 characters.
 			x - Does x ever win at 9? (Yes)
-	4. Implement computer player.
+	4. Implement computer player (O).
 		- For every move that x can make, o's best move is known?
+		- Can O exploit poor play? Or be defensive if necessary?
+		- Is human-recognized "strategy" (not end state) encoded or determined by the computer?
+		- Is it possible, beneficial, or necessary to evaluate every permutation in advance and use those results to achieve the computer-player? (Of course, yes. Calculate it ahead of time and use that.)
 */
