@@ -21,7 +21,7 @@ var clickHandler = 	function(e, boole=true) {
 				(index == 0) ? index = 1: index = 0;
 				child.innerHTML = marker[index];
 				child.style.color = "rgb("+color[index]+")";
-				game[cell] = index;
+				game[cell] = getMoveNumber();
 				checkGameStatus(boole);
 				return;
 			}
@@ -54,9 +54,30 @@ var getRandomMove = function() {
 };
 
 
+// Select a NON-RANDOM move
+var selectedPermutation = undefined;
+var	getNonRandomMove = function(level=9) {
+	
+	/*
+		x Find game state
+		- Create the regex permutation
+		- If a permutation is set, is the game state still consistent?
+			- If yes, make the next move
+			- If no, find another permutation based on game state
+	*/
+	
+	
+	
+	console.log(game);
+	
+};
+
+
 
 var doComputerMove = function() {
-
+	
+	var item = getNonRandomMove();		
+	console.log(item);
 	var item = getRandomMove();	
 	
 	// Implement Move
