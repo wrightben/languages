@@ -49,7 +49,7 @@ var marker = ["1","2"];
 var color = ["66 133 244","251 189 5"];
 var index = 1; // Will switch first player to 0.
 
-var clickHandler = 	function(e, boole=true) {
+var clickHandler = 	function(e, boole=false) {
 	var cell = 0; //zero-based
 	
 	for (const child of children) {
@@ -73,49 +73,3 @@ var clickHandler = 	function(e, boole=true) {
 
 
 parent.addEventListener('click', clickHandler);
-
-/*
-	x - When a player "wins", turn the losing letters to rgb(237 237 237). Disable click.
-	x - Store each move in a 9-value array; Create the list of sets for each row, column, diagonal.
-	x - Figure out which permutations win and for whom.
-		x - The 9-digit permutations in filter.js can be converted to odd-even characters. 
-		x - No permutation can be less than 5 characters long.
-		x - Winning permutations are usually less than 9 characters.
-			x - Does x ever win at 9? (Yes)
-	x. Implement computer player (O).
-		- Implement a non-random algorithm (O)
-			- For every move that x can make, o's best move is known?
-				- No. Pick a permutation that wins (or draws) in the shortest time. If it's impeded, try again.
-					- Are permutations that win from move 2 in the same amount of time equal?
-			- Can O exploit poor play? Or be defensive if necessary?
-				- What indicates these conditions?
-			- Shall human-recognized "strategy" (not end state) be encoded? Or shall it be determined by the computer?
-			- Is it possible, beneficial, or necessary to evaluate every permutation in advance and use those results to achieve the computer-player? (Of course, yes. Calculate it ahead of time and use that.)
-			- How do the responses of groups of players change the perspective on what move should be made? Are there any interesting cases in Tic-Tac-Toe?
-*/
-
-
-
-
-
-var doComputerMove = function() {
-
-	// Select a RANDOM move (not an algorithm move)
-	var random = [];
-	for (var i = 0; i < 9; i++) {
-		if (game[i] == -1) {
-			random.push(i);
-		};
-	};
-	
-	var item = random[ Math.floor(Math.random() * random.length) ];
-	
-	// DEBUG
-	// console.log(random, item, children, children.item(item) );
-	
-	// Implement Move
-	setTimeout(function() {
-		clickHandler( { "target":children.item(item) }, false ); // false = don't do a computer move after
-	}, 500);
-
-};
