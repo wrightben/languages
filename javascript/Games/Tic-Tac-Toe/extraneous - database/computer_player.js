@@ -1,6 +1,6 @@
 /*
 	Redefine clickHandler with boole=true (to make computer move)
-	I hadn't encountered this problem before this. Without researching 
+	I hadn't encountered this problem before. Without researching 
 	it at all, I assume the {add/remove}EventListener functions are doing
 	a search on an index of events.
 	
