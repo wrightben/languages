@@ -1,8 +1,9 @@
 /*
-	Redefine clickHandler with boole=true (to make computer move)
+	Redefine clickHandler with boole=true (to make computer move).
 	I hadn't encountered this problem before. Without researching 
-	it, I assume the {add/remove}EventListener functions are doing
-	a search on an index of events.
+	it, I assume the {add/remove}EventListener functions are iterating 
+	over an index of functions and doing an object comparison instead of
+	using a string as an id.
 	
 	It might be interesting to think through this design—I'm not sure yet
 	if I would change my code or change the language itself. Why aren't
