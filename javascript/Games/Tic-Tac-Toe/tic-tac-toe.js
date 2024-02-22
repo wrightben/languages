@@ -85,6 +85,8 @@ parent.addEventListener('click', clickHandler);
 	x. Implement computer player (O).
 		- Implement a non-random algorithm (O)
 			- For every move that x can make, o's best move is known?
+				- No. Pick a permutation that wins (or draws) in the shortest time. If it's impeded, try again.
+					- Are permutations that win from move 2 in the same amount of time equal?
 			- Can O exploit poor play? Or be defensive if necessary?
 				- What indicates these conditions?
 			- Shall human-recognized "strategy" (not end state) be encoded? Or shall it be determined by the computer?
