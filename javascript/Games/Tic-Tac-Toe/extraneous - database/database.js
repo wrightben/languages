@@ -172,7 +172,6 @@ var getResultSet = function( list=createList() ) {
 		} else {
 			result = resultSetCache[e];
 		}
-		console.log(result);
 		new_list.push(result);
 	});
 	return new_list;

@@ -65,16 +65,13 @@ var	getNonRandomMove = function(level=9) {
 		x Get list of permutations 
 		x Get results
 		- Sort list of permutations by results
-		- Select permutation (randomly?), make next move
-		
-		- If a permutation is set, is the game state still consistent?
-			- If yes, make the next move
-				The game length is the next move number
-			- If no, find another permutation based on game state
+		- Does selectedPermutation match regex?
+			- Select permutation (randomly?)
+		- Make next move
 	*/
 	
 	
-	// Create the regex from the game
+	// 1. Create the regex from the game
 	var regex = [];
 	var move = getMoveNumber();
 	for (var i = 0; i < 9; i++) {
@@ -83,14 +80,22 @@ var	getNonRandomMove = function(level=9) {
 	regex = '^'+regex.join("");
 	console.log( game, regex );
 	
-	// Get a filtered list of permutations (either from createList() or cachedList)
+	// 2. Get a filtered list of permutations (either from createList() or cachedList)
 	(typeof filteredList == "undefined") ? 
 		filteredList = getFilteredList(regex) : 
 		filteredList = getFilteredList(regex, filteredList);
 	
+	// 3. Create resultSetCache
+	getResultSet(filteredList);
+
+// 	DEBUG
 // 	console.log(JSON.stringify(filteredList));
-	
-	
+// 	console.log(JSON.stringify(resultSetCache));
+
+	// 4. Sort list of permutations by results
+	filteredList.sort(function(a,b) {
+		return a - b;
+	});
 	
 };
 
@@ -107,21 +112,3 @@ var doComputerMove = function() {
 	}, 250);
 
 };
-
-
-
-/*
-	x - When a player "wins", turn the losing letters to rgb(237 237 237). Disable click.
-	x - Store each move in a 9-value array; Create the list of sets for each row, column, diagonal.
-	x - Figure out which permutations win and for whom.
-		x - The 9-digit permutations in filter.js can be converted to odd-even characters. 
-		x - No permutation can be less than 5 characters long.
-		x - Winning permutations are usually less than 9 characters.
-			x - Does x ever win at 9? (Yes)
-	x. Implement computer player (O).
-		- Implement a non-random algorithm (O)
-			- Pick a permutation that wins (or draws) in the shortest time. If it's impeded, try again.
-		
-	NOTE:
-	Other seemingly less-valuable questions about the non-random algorithm were removed from this file on Feb 22 2024. See GitHub history if necessary.
-*/
