@@ -119,7 +119,7 @@ var	getNonRandomMove = function(level=9) {
 		
 		a_ = a % 2;
 		b_ = b % 2;
-		c_ = c % 2;		
+		c_ = c % 2;
 		
 		// REFACTOR
 		if ( (a_ == -1) && (b_ == c_) && (c_ == 1) ) {
