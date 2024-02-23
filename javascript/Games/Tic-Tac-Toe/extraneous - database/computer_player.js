@@ -109,13 +109,15 @@ var	getNonRandomMove = function(level=9) {
 		selectedPermutation = [filteredList[0]]; // Winning is the only option.
 	};
 	
-	// ?. NEXT MOVE: Contingent on draw (win)
+	
+	// 6. Select the NEXT move
+	// ?. NEXT MOVE: selecting from shortest winning permutation
 	var next = selectedPermutation[0].indexOf(move);
 	
-	// ?. NEXT MOVE: Contingent on draw (center on first move)
+	// ?. NEXT MOVE: selecting open center on o's first move
 	if ( (move == 2) && (game[4] == -1) ) { next = 4; }
 	
-	// 6. Draw Defense
+	// ?. NEXT MOVE: selecting for block
 	sets.find(function(e) { // For every set
 	
 		var a = game[e[0] - 1], // Convert Move # into Value
