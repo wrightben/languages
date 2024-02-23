@@ -25,26 +25,30 @@ children = parent.children;
 
 var checkGameStatus = function(boole) { // boole = make computer move
 
-	sets.find(function(e,i) {
+	sets.find(function(e) { // For every set
 	
 		var a = game[e[0] - 1] % 2, // Convert Move # into Value
 			b = game[e[1] - 1] % 2,
 			c = game[e[2] - 1] % 2;
-			
-		if ((a != -1) && (a == b) && (b == c)) {
-			for (const child of children) {
-				var i = child.innerHTML;
-				if (i != marker[a]) {
-					child.style.color = "rgb(237 237 237)";
-				}
+		
+		// If a set is matching ... 	
+		if ((a != -1) && (a == b) && (b == c)) { // Check all sets, only enter this block if a,b,c are equal.
+			for (const child of children) { // Loop all the HTML squares
+				var i = child.innerHTML;		
+				if (i != marker[[1,0][a]]) { // Swap % = 0|1 into 1|0.
+					child.style.color = "rgb(237 237 237)"; // These squares are losers.
+				};
 			};
+			
+			// End Game
 			parent.removeEventListener('click',clickHandler);
 			boole = false;
-			return;
-		}
+			
+			return true;
+		};
 		
 	});
-	
+
 	if (boole == true) { doComputerMove(); }
 
 };
