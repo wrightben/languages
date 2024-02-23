@@ -66,7 +66,8 @@ var createList = function(pattern=-1) { // Example pattern: "....1...." (Move 1 
 
 
 var getFilteredList = function( pattern, list=createList() ) { // Example pattern: "....1...." (Move 1 in 5th cell)
-	return list.filter( (e) => new RegExp(pattern).test(e) );
+	var new_list = list.filter( (e) => new RegExp(pattern).test(e) );
+	return new_list;
 }
 
 
@@ -154,9 +155,9 @@ var evaluateListItem = function(item) {
 		
 	});
 	
-	(typeof gameStatus != "undefined") ? gameStatus.unshift(gameIndex) : gameStatus = -1;
+	(typeof gameStatus != "undefined") ? gameStatus.unshift(gameIndex) : gameStatus = [9,[],0.5]; // Draw
 	
-	return gameStatus; // gameStatus is [ 7, [ 1, 5, 9 ], 1 ] as [ move#, set, winner ] or -1.
+	return gameStatus; // gameStatus is [ 7, [ 1, 5, 9 ], 1 ] as [ move#, set, winner ] or [9,[],0.5].
 	
 };
 

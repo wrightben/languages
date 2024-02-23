@@ -55,7 +55,7 @@ var getRandomMove = function() {
 
 
 // Select a NON-RANDOM move
-var selectedPermutation = undefined; // List of 1 "selected" permutation
+var selectedPermutation = ["123456789"]; // List of 1 "selected" permutation
 var filteredList = undefined; // List of filtered permutations
 var	getNonRandomMove = function(level=9) {
 	
@@ -64,9 +64,9 @@ var	getNonRandomMove = function(level=9) {
 		x Create the regex permutation
 		x Get list of permutations 
 		x Get results
-		- Sort list of permutations by results
-		- Does selectedPermutation match regex?
-			- Select permutation (randomly?)
+		x Sort list of permutations by results
+		x Does selectedPermutation match regex?
+			? Select permutation (randomly?)
 		- Make next move
 	*/
 	
@@ -88,14 +88,39 @@ var	getNonRandomMove = function(level=9) {
 	// 3. Create resultSetCache
 	getResultSet(filteredList);
 
+	// 4. Sort list of permutations by results
+	filteredList.sort(function(a,b) {
+	
+		var ar = resultSetCache[a];
+		var br = resultSetCache[b];
+		
+		// SORT: Value (w,d,l)
+		if (ar[2] == br[2]) { return ar[0] - br[0]; } // Order (Asc): 5,6,7,8,9
+		// SORT: Length
+		return ar[2] - br[2]; // Order (Asc): 0, 0.5, 1
+		
+	});
+	
+	// 5. Select the 0th permutation or use cache
+	selectedPermutation = getFilteredList(regex, selectedPermutation); // Is the permutation still valid?
+	if (selectedPermutation.length == 0) {
+		selectedPermutation = [filteredList[0]];
+	}
+	
+	
 // 	DEBUG
 // 	console.log(JSON.stringify(filteredList));
 // 	console.log(JSON.stringify(resultSetCache));
-
-	// 4. Sort list of permutations by results
-	filteredList.sort(function(a,b) {
-		return a - b;
-	});
+// 
+// 	filteredList.forEach(function(e,i) {
+// 		console.log(i, e, JSON.stringify(resultSetCache[e]), filteredList.length );
+// 	});
+//
+// 	console.log(selectedPermutation);
+	
+	var next = selectedPermutation[0].indexOf(move);
+	console.log(selectedPermutation, move, next);
+	return next;
 	
 };
 
@@ -104,7 +129,7 @@ var	getNonRandomMove = function(level=9) {
 var doComputerMove = function() {
 	
 	var item = getNonRandomMove();
-	var item = getRandomMove();	
+// 	var item = getRandomMove();	
 	
 	// Implement Move
 	setTimeout(function() {
