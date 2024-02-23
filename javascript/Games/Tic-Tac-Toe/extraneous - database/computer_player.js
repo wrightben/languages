@@ -80,7 +80,7 @@ var	getNonRandomMove = function(level=9) {
 	regex = '^'+regex.join("");
 	console.log( game, regex );
 	
-	// 2. Get a filtered list of permutations (either from createList() or cachedList)
+	// 2. Get a filtered list of permutations (either from createList() or filteredList)
 	(typeof filteredList == "undefined") ? 
 		filteredList = getFilteredList(regex) : 
 		filteredList = getFilteredList(regex, filteredList);
@@ -104,8 +104,8 @@ var	getNonRandomMove = function(level=9) {
 	// 5. Select the 0th permutation or use cache
 	selectedPermutation = getFilteredList(regex, selectedPermutation); // Is the permutation still valid?
 	if (selectedPermutation.length == 0) {
-		selectedPermutation = [filteredList[0]];
-	}
+		selectedPermutation = [filteredList[0]]; // Winning is the only option.
+	};
 	
 	
 // 	DEBUG
