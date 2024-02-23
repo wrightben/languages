@@ -63,6 +63,7 @@ var	getNonRandomMove = function(level=9) {
 		- Create the regex permutation
 		- If a permutation is set, is the game state still consistent?
 			- If yes, make the next move
+				The game length is the next move number
 			- If no, find another permutation based on game state
 	*/
 	
