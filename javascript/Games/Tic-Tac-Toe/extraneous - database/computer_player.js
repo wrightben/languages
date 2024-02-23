@@ -61,8 +61,8 @@ var	getNonRandomMove = function(level=9) {
 	/*
 		x Find game state
 		x Create the regex permutation
-		- Get list of permutations 
-		- Get results
+		x Get list of permutations 
+		x Get results
 		- Sort list of results
 		- Select permutation (randomly), make next move
 		
@@ -81,10 +81,6 @@ var	getNonRandomMove = function(level=9) {
 	};
 	regex = '^'+regex.join("");
 	console.log( game, regex );
-	
-	
-	//
-	
 	
 	
 };

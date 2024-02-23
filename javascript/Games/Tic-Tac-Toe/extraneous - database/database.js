@@ -28,30 +28,47 @@ var incrementer = function (s) {
 	}
 	
 	s = prepend.concat(append);
-
-	if (s.length == 0) { return "no answer"; } // NO ANSWER
 	
 	return s;
 
 };
 
-var createList = function() {
-	var list = [];
-
-	var p = "123456789".split("");
-	list.push(p);
+var createList = function(pattern=-1) { // Example pattern: "....1...." (Move 1 in 5th cell)
 	
-	while ( x != "no answer" ) {
-		x = incrementer(x);
-		list.push(x.join(""));
-	}
+	console.log("createList");
+
+	var re = new RegExp(pattern);
+	
+	var list = [];
+	var p1 = "123456789";
+	var p = p1.split("");
+	var s = "";	
+	
+	
+	// Store the first iteration, if it matches re
+	if ( pattern == -1 || re.test( p1 ) ) { list.push( p1 ); };
+	
+	// Until p is an empty set, increment and append p to list
+	while(p.length > 0) {
+		p = incrementer(p);
+		s = p.join("");
+		if ( pattern == -1 || re.test( s ) ) {
+			list.push( s );
+		};
+	};
+	
+	
+	// Patterns won't include the empty array
+	if (list[list.length -1] == "") {
+		list.pop(); // Remove trailing empty 
+	};
 	
 	return list;
 };
 
 
-var getFilteredList = function(re) {
-	return list.filter( (e) => new RegExp(re).test(e) );
+var getFilteredList = function( pattern, list=createList() ) { // Example pattern: "....1...." (Move 1 in 5th cell)
+	return list.filter( (e) => new RegExp(pattern).test(e) );
 }
 
 
@@ -89,8 +106,7 @@ var evaluateListItem = function(item) {
 	var game8 = new Array(9).fill(-1);
 	var game9 = new Array(9).fill(-1);	
 
-	var	move, 
-		value;
+	var	move, value;
 
 	for (var i = 0; i < 9; i++) {
 	
@@ -146,6 +162,25 @@ var evaluateListItem = function(item) {
 	
 };
 
+var resultSetCache = {};
+var getResultSet = function( list=createList() ) {
+	var new_list = [];
+	var result = undefined;
+	
+	list.forEach(function(e) {
+		if (typeof resultSetCache[e] == "undefined") {
+			result = evaluateListItem(e);
+			resultSetCache[e] = result;
+		} else {
+			result = resultSetCache[e];
+		}
+		console.log(result);
+		new_list.push(result);
+	});
+	return new_list;
+};
+
+
 // *******************************
 // VARIABLES + FUNCTION CALLS 
 // *******************************
@@ -161,12 +196,14 @@ var sets = [
 	[3,5,7]
 ];
 
-var list = createList();
+// var list = createList("^..1.....");
 
 
-
-// console.log(getFilteredList("....[1]...."));
-
+// console.log(JSON.stringify(
+// 	getFilteredList('^........9',
+// 		getFilteredList('^2........', 
+// 			getFilteredList("^....1....") ))
+// ));
 
 
 // Determine which color wins each permutation.
@@ -174,7 +211,9 @@ var list = createList();
 // 	console.log(evaluateListItem(item));
 // });
 
-
+console.log(JSON.stringify(
+	getResultSet()
+));
 
 
 var setExports = function() {
