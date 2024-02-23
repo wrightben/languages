@@ -196,9 +196,14 @@ var sets = [
 	[3,5,7]
 ];
 
+
+// FILTERED PERMUTATION LISTS
+// -------------------------------
 // var list = createList("^..1.....");
 
 
+// FILTERED PERMUTATION LISTS
+// -------------------------------
 // console.log(JSON.stringify(
 // 	getFilteredList('^........9',
 // 		getFilteredList('^2........', 
@@ -206,14 +211,18 @@ var sets = [
 // ));
 
 
-// Determine which color wins each permutation.
+// ALL RESULTS (Determine Which Color Wins Each Permutation)
+// -------------------------------
 // list.forEach(function(item, index) {
 // 	console.log(evaluateListItem(item));
 // });
 
-console.log(JSON.stringify(
-	getResultSet()
-));
+
+// CACHE ALL RESULTS
+// -------------------------------
+// console.log(JSON.stringify(
+// 	getResultSet() // list: optional
+// ));
 
 
 var setExports = function() {
