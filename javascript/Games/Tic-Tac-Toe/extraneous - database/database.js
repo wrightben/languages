@@ -34,8 +34,6 @@ var incrementer = function (s) {
 };
 
 var createList = function(pattern=-1) { // Example pattern: "....1...." (Move 1 in 5th cell)
-	
-	console.log("createList");
 
 	var re = new RegExp(pattern);
 	

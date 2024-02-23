@@ -49,7 +49,9 @@ var checkGameStatus = function(boole) { // boole = make computer move
 		
 	});
 
-	if (boole == true) { doComputerMove(); }
+	if (boole == true) { 
+		setTimeout(function() { doComputerMove(); }, 250);
+	};
 
 };
 

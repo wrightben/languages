@@ -55,7 +55,8 @@ var getRandomMove = function() {
 
 
 // Select a NON-RANDOM move
-var selectedPermutation = undefined;
+var selectedPermutation = undefined; // List of 1 "selected" permutation
+var filteredList = undefined; // List of filtered permutations
 var	getNonRandomMove = function(level=9) {
 	
 	/*
@@ -63,8 +64,8 @@ var	getNonRandomMove = function(level=9) {
 		x Create the regex permutation
 		x Get list of permutations 
 		x Get results
-		- Sort list of results
-		- Select permutation (randomly), make next move
+		- Sort list of permutations by results
+		- Select permutation (randomly?), make next move
 		
 		- If a permutation is set, is the game state still consistent?
 			- If yes, make the next move
@@ -82,6 +83,14 @@ var	getNonRandomMove = function(level=9) {
 	regex = '^'+regex.join("");
 	console.log( game, regex );
 	
+	// Get a filtered list of permutations (either from createList() or cachedList)
+	(typeof filteredList == "undefined") ? 
+		filteredList = getFilteredList(regex) : 
+		filteredList = getFilteredList(regex, filteredList);
+	
+// 	console.log(JSON.stringify(filteredList));
+	
+	
 	
 };
 
@@ -89,8 +98,7 @@ var	getNonRandomMove = function(level=9) {
 
 var doComputerMove = function() {
 	
-	var item = getNonRandomMove();		
-	console.log(item);
+	var item = getNonRandomMove();
 	var item = getRandomMove();	
 	
 	// Implement Move
