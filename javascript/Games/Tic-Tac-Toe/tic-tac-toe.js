@@ -32,7 +32,7 @@ var checkGameStatus = function(boole) { // boole = make computer move
 			c = game[e[2] - 1] % 2;
 		
 		// If a set is matching ... 	
-		if ((a != -1) && (a == b) && (b == c)) { // Check all sets, only enter this block if a,b,c are equal.
+		if ((a != -1) && (a == b) && (b == c)) { // Check all sets, only enter this block if a,b,c are equal (winning set)
 			for (const child of children) { // Loop all the HTML squares
 				var i = child.innerHTML;		
 				if (i != marker[[1,0][a]]) { // Swap % = 0|1 into 1|0; If not the winning player, gray out.
