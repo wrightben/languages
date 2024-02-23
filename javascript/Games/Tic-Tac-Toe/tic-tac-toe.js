@@ -35,8 +35,8 @@ var checkGameStatus = function(boole) { // boole = make computer move
 		if ((a != -1) && (a == b) && (b == c)) { // Check all sets, only enter this block if a,b,c are equal.
 			for (const child of children) { // Loop all the HTML squares
 				var i = child.innerHTML;		
-				if (i != marker[[1,0][a]]) { // Swap % = 0|1 into 1|0.
-					child.style.color = "rgb(237 237 237)"; // These squares are losers.
+				if (i != marker[[1,0][a]]) { // Swap % = 0|1 into 1|0; If not the winning player, gray out.
+					child.style.color = "rgb(237 237 237)";
 				};
 			};
 			
