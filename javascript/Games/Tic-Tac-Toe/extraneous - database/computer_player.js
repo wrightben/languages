@@ -55,7 +55,7 @@ var getRandomMove = function() {
 
 
 // Select a NON-RANDOM move
-var selectedPermutation = ["123456789"]; // List of 1 "selected" permutation; Change to use regex to play empty center square
+var selectedPermutation = ["123456789"]; // List of 1 "selected" permutation
 var filteredList = undefined; // List of filtered permutations
 var	getNonRandomMove = function(level=9) {
 	
