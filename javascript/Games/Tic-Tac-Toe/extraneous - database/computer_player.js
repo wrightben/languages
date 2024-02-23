@@ -101,11 +101,36 @@ var	getNonRandomMove = function(level=9) {
 		
 	});
 	
-	// 5. Select the 0th permutation or use cache
+	// 5. Select the 0th permutation or use selectedPermutation
 	selectedPermutation = getFilteredList(regex, selectedPermutation); // Is the permutation still valid?
 	if (selectedPermutation.length == 0) {
 		selectedPermutation = [filteredList[0]]; // Winning is the only option.
 	};
+	
+	// ?. NEXT MOVE: Contingent on draw
+	var next = selectedPermutation[0].indexOf(move);
+	
+	// 6. Defense: Until a logical implementation can be found, defend against draws
+	sets.find(function(e) { // For every set
+	
+		var a = game[e[0] - 1], // Convert Move # into Value
+			b = game[e[1] - 1],
+			c = game[e[2] - 1];
+		
+		a_ = a % 2;
+		b_ = b % 2;
+		c_ = c % 2;		
+		
+		// REFACTOR
+		if ( (a_ == -1) && (b_ == c_) && (c_ == 1) ) {
+			next = e[0] - 1;
+		} else if ( (b_ == -1) && (a_ == c_) && (a_ == 1) ) {
+			next = e[1] - 1;
+		} else if ( (c_ == -1) && (a_ == b_) && (b_ == 1) ) {
+			next = e[2] - 1;
+		};
+		
+	});	
 	
 	
 // 	DEBUG
@@ -117,9 +142,10 @@ var	getNonRandomMove = function(level=9) {
 // 	});
 //
 // 	console.log(selectedPermutation);
-	
-	var next = selectedPermutation[0].indexOf(move);
-	console.log(selectedPermutation, move, next);
+//
+// 	console.log(selectedPermutation, move, next);
+
+
 	return next;
 	
 };
