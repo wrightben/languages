@@ -1,7 +1,7 @@
 ### Tic-Tac-Toe
 
 >[!NOTE]
-> **database.js**: Creates a list of the permutations for [1-9]. It can be used to filter that list using regex. And it can be used to generate a list of the game results for each permutation.
+> **database.js**: Creates a list of the permutations for [1-9]. It can be used to filter that list using regex. And it can be used to generate a list of the game results for each permutation. It and/or **computer_player.js** can be included in a website or Node script.
 
 
 
