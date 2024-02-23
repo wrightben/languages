@@ -55,7 +55,7 @@ var getRandomMove = function() {
 
 
 // Select a NON-RANDOM move
-var selectedPermutation = ["123456789"]; // List of 1 "selected" permutation
+var selectedPermutation = ["123456789"]; // List of 1 "selected" permutation; Change to use regex to play empty center square
 var filteredList = undefined; // List of filtered permutations
 var	getNonRandomMove = function(level=9) {
 	
@@ -67,7 +67,9 @@ var	getNonRandomMove = function(level=9) {
 		x Sort list of permutations by results
 		x Does selectedPermutation match regex?
 			? Select permutation (randomly?)
-		- Make next move
+		x Make next move
+			x Block
+			- Optimize to get the middle square?
 	*/
 	
 	
@@ -107,10 +109,13 @@ var	getNonRandomMove = function(level=9) {
 		selectedPermutation = [filteredList[0]]; // Winning is the only option.
 	};
 	
-	// ?. NEXT MOVE: Contingent on draw
+	// ?. NEXT MOVE: Contingent on draw (win)
 	var next = selectedPermutation[0].indexOf(move);
 	
-	// 6. Defense: Until a logical implementation can be found, defend against draws
+	// ?. NEXT MOVE: Contingent on draw (center on first move)
+	if ( (move == 2) && (game[4] == -1) ) { next = 4; }
+	
+	// 6. Draw Defense
 	sets.find(function(e) { // For every set
 	
 		var a = game[e[0] - 1], // Convert Move # into Value
