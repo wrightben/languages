@@ -1,9 +1,7 @@
 ### Tic-Tac-Toe
 
 >[!NOTE]
-> **filter.js**
-
-filter.js contains the 9! list of 1-9 permutations. It can be used to filter that list based on a game state. And it can be used to generate database.js, which is a list of the game results for each permutation.
+> **filter.js**: Creates a list of the permutations for [1-9]. It can be used to filter that list using regex. And it can be used to generate a list of the game results for each permutation.
 
 
 

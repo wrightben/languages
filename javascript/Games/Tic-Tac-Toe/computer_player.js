@@ -60,7 +60,12 @@ var	getNonRandomMove = function(level=9) {
 	
 	/*
 		x Find game state
-		- Create the regex permutation
+		x Create the regex permutation
+		- Get list of permutations 
+		- Get results
+		- Sort list of results
+		- Select permutation (randomly), make next move
+		
 		- If a permutation is set, is the game state still consistent?
 			- If yes, make the next move
 				The game length is the next move number
@@ -68,8 +73,19 @@ var	getNonRandomMove = function(level=9) {
 	*/
 	
 	
+	// Create the regex from the game
+	var regex = [];
+	var move = getMoveNumber();
+	for (var i = 0; i < 9; i++) {
+		( game[i] != -1 ) ? regex.push(game[i]) : regex.push('.');
+	};
+	regex = '^'+regex.join("");
+	console.log( game, regex );
 	
-	console.log(game);
+	
+	//
+	
+	
 	
 };
 
@@ -84,7 +100,7 @@ var doComputerMove = function() {
 	// Implement Move
 	setTimeout(function() {
 		clickHandler( { "target":children.item(item) }, false ); // false = don't do a computer move after
-	}, 500);
+	}, 250);
 
 };
 
