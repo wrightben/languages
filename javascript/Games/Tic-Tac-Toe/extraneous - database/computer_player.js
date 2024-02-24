@@ -66,7 +66,8 @@ var	getNonRandomMove = function(level=9) {
 		x Get results
 		x Sort list of permutations by results
 		x Does selectedPermutation match regex?
-			? Select permutation (randomly?)
+			x Select permutation
+				- Random selection? Caution: This is not as easy as it first seems. The interaction between a plan (consistency) and a block (immediacy) requires thought. The choice to randomize plan selection can happen at the first move only or any time the plan must change. But when this works, it's extremely compelling in this implementation. Note to self: Good job.
 		x Make NEXT move
 			x Optimize NEXT to get the middle square
 				x Refactor to randomly play non-middle NEXT 20% of the time?
@@ -118,7 +119,7 @@ var	getNonRandomMove = function(level=9) {
 	var next = selectedPermutation[0].indexOf(move);
 	
 	// ?. NEXT MOVE: selecting open center on o's first move
-	var chance = (Math.floor( Math.random() * 10 ) + 1 ) > 2; // Randomize center acquisition (20% off center)
+	var chance = Math.random() > .2; // Randomize center acquisition (20% off center)
 	if ( (move == 2) && (game[4] == -1) && ( chance ) ) { next = 4; }
 	
 	// ?. NEXT MOVE: win on next move or block?
