@@ -90,7 +90,7 @@ var findPermutationWinner = function(game) { // Copy of checkGameStatus()
 	
 	// Return the array or undefined
 	if (typeof returnValue != "undefined") {
-		return [set, returnValue];
+		return [set, returnValue]; // returnValue = [0|1] ... 0 = player 2 (o), 1 = player 1 (x)
 	};
 
 };

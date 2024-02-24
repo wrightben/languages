@@ -98,7 +98,7 @@ var	getNonRandomMove = function(level=9) {
 		var ar = resultSetCache[a];
 		var br = resultSetCache[b];
 		
-		// SORT: Value (w,d,l) ... Order (Asc): 0, 0.5, 1
+		// SORT: Value (w,d,l) ... Order (Asc): 0 ("o" wins), 0.5 (Draw), 1 ("x" wins)
 		if (ar[2] == br[2]) { return ar[0] - br[0]; } 
 		// SORT: Length ... Order (Asc): 5,6,7,8,9
 		return ar[2] - br[2];
