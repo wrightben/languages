@@ -60,8 +60,8 @@ var filteredList = undefined; // List of filtered permutations
 var	getNonRandomMove = function(level=9) {
 	
 	/*
-		x Find game state
-		x Create the regex permutation
+		x Get game state // var game (global)
+		x Get the game regex
 		x Get list of permutations 
 		x Get results
 		x Sort list of permutations by results
@@ -77,12 +77,8 @@ var	getNonRandomMove = function(level=9) {
 	*/
 	
 	
-	// 1. Create the regex from the game
-	var regex = [];
-	for (var i = 0; i < 9; i++) {
-		( game[i] != -1 ) ? regex.push(game[i]) : regex.push('.');
-	};
-	regex = '^'+regex.join("");
+	// 1. Get the regex from the game
+	var regex = getGameRegex();
 	
 	// 2. Get a filtered list of permutations (either from createList() or filteredList)
 	(typeof filteredList == "undefined") ? 

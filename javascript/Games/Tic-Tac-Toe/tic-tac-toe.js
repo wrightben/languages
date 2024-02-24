@@ -17,6 +17,16 @@ var getMoveNumber = function() { // Range: 10 (9 moves were made) ... 1 (1st mov
 	return move;
 };
 
+var getGameRegex() = function() {
+	var regex = [];
+	for (var i = 0; i < 9; i++) {
+		( game[i] != -1 ) ? regex.push(game[i]) : regex.push('.');
+	};
+	regex = '^'+regex.join("");
+	return regex;
+};
+
+
 // getElementsByClassName
 grid = document.getElementsByClassName('grid-container');
 parent = grid.item(0);
