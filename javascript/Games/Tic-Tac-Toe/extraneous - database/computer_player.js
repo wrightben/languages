@@ -69,9 +69,9 @@ var	getNonRandomMove = function(level=9) {
 			? Select permutation (randomly?)
 		x Make NEXT move
 			x Optimize NEXT to get the middle square
-				- Refactor to randomly play non-middle NEXT 20% of the time?
+				x Refactor to randomly play non-middle NEXT 20% of the time?
 			x Block with NEXT
-				- Don't block if NEXT can win
+				x Don't block if NEXT can win
 			
 	*/
 	
