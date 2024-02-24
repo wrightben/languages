@@ -67,20 +67,21 @@ var	getNonRandomMove = function(level=9) {
 		x Sort list of permutations by results
 		x Does selectedPermutation match regex?
 			? Select permutation (randomly?)
-		x Make next move
-			x Block
-			- Optimize to get the middle square?
+		x Make NEXT move
+			x Optimize NEXT to get the middle square
+				- Refactor to randomly play non-middle NEXT 20% of the time?
+			x Block with NEXT
+				- Don't block if NEXT can win
+			
 	*/
 	
 	
 	// 1. Create the regex from the game
 	var regex = [];
-	var move = getMoveNumber();
 	for (var i = 0; i < 9; i++) {
 		( game[i] != -1 ) ? regex.push(game[i]) : regex.push('.');
 	};
 	regex = '^'+regex.join("");
-	console.log( game, regex );
 	
 	// 2. Get a filtered list of permutations (either from createList() or filteredList)
 	(typeof filteredList == "undefined") ? 
@@ -109,35 +110,44 @@ var	getNonRandomMove = function(level=9) {
 		selectedPermutation = [filteredList[0]]; // Winning is the only option.
 	};
 	
+	var move = getMoveNumber();
+	var end = resultSetCache[selectedPermutation[0]][0]; // Turn 
 	
 	// 6. Select the NEXT move
 	// ?. NEXT MOVE: selecting from shortest winning permutation
 	var next = selectedPermutation[0].indexOf(move);
 	
 	// ?. NEXT MOVE: selecting open center on o's first move
-	if ( (move == 2) && (game[4] == -1) ) { next = 4; }
+	var chance = (Math.floor( Math.random() * 10 ) + 1 ) > 2; // Randomize center acquisition (20% off center)
+	if ( (move == 2) && (game[4] == -1) && ( chance ) ) { next = 4; }
 	
-	// ?. NEXT MOVE: selecting for block
-	sets.find(function(e) { // For every set
+	// ?. NEXT MOVE: win on next move or block?
+	console.log(move, end, chance, next, game, regex);
+	if ( move < end ) { // Block
 	
-		var a = game[e[0] - 1], // Convert Move # into Value
-			b = game[e[1] - 1],
-			c = game[e[2] - 1];
+		// ?. NEXT MOVE: selecting for block
+		sets.find(function(e) { // For every set
+	
+			var a = game[e[0] - 1], // Convert Move # into Value
+				b = game[e[1] - 1],
+				c = game[e[2] - 1];
 		
-		a_ = a % 2;
-		b_ = b % 2;
-		c_ = c % 2;
+			a_ = a % 2;
+			b_ = b % 2;
+			c_ = c % 2;
 		
-		// REFACTOR
-		if ( (a_ == -1) && (b_ == c_) && (c_ == 1) ) {
-			next = e[0] - 1;
-		} else if ( (b_ == -1) && (a_ == c_) && (a_ == 1) ) {
-			next = e[1] - 1;
-		} else if ( (c_ == -1) && (a_ == b_) && (b_ == 1) ) {
-			next = e[2] - 1;
-		};
+			// REFACTOR
+			if ( (a_ == -1) && (b_ == c_) && (c_ == 1) ) {
+				next = e[0] - 1;
+			} else if ( (b_ == -1) && (a_ == c_) && (a_ == 1) ) {
+				next = e[1] - 1;
+			} else if ( (c_ == -1) && (a_ == b_) && (b_ == 1) ) {
+				next = e[2] - 1;
+			};
 		
-	});	
+		});	
+	
+	};
 	
 	
 // 	DEBUG

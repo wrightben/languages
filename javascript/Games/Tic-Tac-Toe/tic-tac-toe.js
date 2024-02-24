@@ -9,7 +9,7 @@ var sets = [[1,2,3],
 
 // Game
 var game = new Array(9).fill(-1);
-var getMoveNumber = function() {
+var getMoveNumber = function() { // Range: 10 (9 moves were made) ... 1 (1st move to be made)
 	var move = 10; // Adding -1 to 10 successively
 	game.forEach(function(e,i) {
 		if (e == -1) { move += e; }
