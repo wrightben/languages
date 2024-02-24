@@ -9,4 +9,4 @@ This is probably the way I would implement it: https://simplemaps.com/world
 
 
 #### Notes
-I could just write a bookmarklet that gets the countries from the simplemaps.com URL and creates a game in their demo page. Any of the example maps could be used to select the countries.
+I could write a bookmarklet that gets the countries from the simplemaps.com URL and creates a game in their demo page. Any of the example maps could be used to select the countries.
