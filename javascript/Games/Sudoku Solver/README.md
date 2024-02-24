@@ -8,7 +8,7 @@ A sudoku solution doesn't excite me, though I enjoyed writing the functions. It 
 node solver.js
 ```
 
-./solver.js: creates the regex list (and may eventually solve a puzzle) <br />
+./solver.js: solves a sudoku puzzle<br />
 ./filter/filter.js: greps a list (row, column or box) regexp from the list of 9!
 
 
