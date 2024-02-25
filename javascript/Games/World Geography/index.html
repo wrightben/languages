@@ -82,6 +82,7 @@
 				
 				if (name == goal) {
 					if (zoomed == 1) {
+						simplemaps_worldmap.back(undefined); // Zoom out 1 level					
 						zoomed = 0;
 					} else {
 						found += 1; // Yay! One point! (No point for using the zoom link.)
