@@ -68,6 +68,8 @@
 			<p>Find <a href="#" onclick="zoomOnCountry()" id="goal"></a>. Correct: <span id="found">0</span></p>
 		</div>
 		<div id="map"></div>
+		<audio id="audio" src="./firework.mp3"></audio>
+		<audio id="audio2" src="./yay.mp3"></audio>		
 		
 		<script src="mapdata.js"></script>
 		<script src="worldmap.js"></script>	
@@ -83,6 +85,8 @@
 						zoomed = 0;
 					} else {
 						found += 1; // Yay! One point! (No point for using the zoom link.)
+						myAudio.play();
+						myAudio2.play();						
 						confetti();
 					};
 					
@@ -149,6 +153,8 @@
 			// VARIABLES
 			var found = 0;
 			var zoomed = 0;
+			var myAudio = document.querySelector('#audio');
+			var myAudio2 = document.querySelector('#audio2');			
 			var find_display = document.getElementById("find");			
 			var goal_link = document.getElementById("goal");
 			var found_display = document.getElementById("found");			
