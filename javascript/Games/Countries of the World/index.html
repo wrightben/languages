@@ -17,10 +17,7 @@
 				var name = simplemaps_worldmap_mapdata.state_specific[id].name;
 // 				console.log(name, id, goal);
 
-				if (name == goal) {
-					goal = getRandomName();
-					var next = confirm("You found "+name+"! Would you like to find "+goal+"?");
-				}
+				quiz_status();
 				
 				
 				return false;
@@ -29,6 +26,8 @@
 			setTimeout(function() {
 				var elements = document.getElementsByTagName('svg');
 				elements.item(2).setAttribute("height", "2000px");
+				
+				quiz_status();
 			}, 2000);
 			
 			var getRandomName = function() {
@@ -38,6 +37,24 @@
 				
 				return state_specific[states[rand]].name;
 				
+			};
+			
+			var goal = undefined;
+			var quiz_status = function(name=-1) {
+				var success = "";
+				
+				if (name == goal) {
+					success = "You found "+name+"!";
+				}
+				
+				var next = false;
+				goal = getRandomName();
+							
+				while (next == false) {
+					goal = getRandomName();
+					next = confirm( success + "Would you like to find "+goal+"?");
+				}
+			
 			};
 			
 			var count = 0;	
@@ -51,9 +68,6 @@
 				names.push(state_specific[state].name);
 				count ++;
 			};
-			
-			var goal = getRandomName();
-			alert("Find "+goal+" ");
 			
 			console.log(count);
 		</script>		
