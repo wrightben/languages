@@ -49,7 +49,7 @@ var simplemaps_worldmap_mapdata={
     initial_zoom_solo: "no",
     region_opacity: 1,
     region_hover_opacity: 0.6,
-    zoom_out_incrementally: "yes",
+    zoom_out_incrementally: "no", /* CHANGED */
     zoom_percentage: 0.99,
     zoom_time: 0.5,
     
