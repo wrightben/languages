@@ -27,11 +27,11 @@
 				left: 20px;
 				z-index: 10;
 				width: 450px;
-				padding: 5px;
-				border: 1px solid rgb(237,237,237);
+				padding: 7px;
+				border: 1px solid rgb(255,255,255);
 				border-radius: 5px;				
 				background-color: #FFF;
-				opacity: 40%;				
+				opacity: 70%;				
 			}
 			#goal {
 			
@@ -55,10 +55,10 @@
 				color: rgb(136, 164, 188);
 			}
 			h3 {
-				margin-bottom: .5em;
+				margin-bottom: 0.25em;
 			}
 			h3 + p {
-				line-height: 1.3em;
+
 			}
 			svg {
 				height: 94vh !important;
@@ -72,7 +72,7 @@
 		<div id="find"></div>	
 		<div id="text">
 			<h3>World Geography</h3>
-			<p>Find <a href="#" onclick="zoomOnCountry()" id="goal"></a>. Correct: <span id="found">0</span></p>
+			<p>Find <a href="#" onclick="zoomOnCountry()" id="goal"></a>. <span id="found">0</span> correct.</p>
 		</div>
 		<div id="map"></div>
 		<audio id="audio" src="./firework.mp3"></audio>
@@ -149,12 +149,15 @@
 				states = [],					
 				names = [],
 				state_specific = simplemaps_worldmap_mapdata.state_specific;
+				mapinfo = simplemaps_worldmap_mapinfo.paths;
 			
 			for (state in state_specific) {
-				count ++;			
-				states.push(state);
-				names.push(state_specific[state].name);
-				console.log(count, state, state_specific[state].name);
+				if (typeof mapinfo[state] != "undefined") { // Not every state is defined on the map, apparently.
+					count ++;
+					states.push(state);
+					names.push(state_specific[state].name);
+					console.log(count, state, state_specific[state].name);
+				};
 			};			
 			
 			
