@@ -2655,7 +2655,7 @@ var simplemaps_worldmap_mapinfo = {
 				}
 				tP = document.createElement("div");
 				var e = m ? "20px" : "5px";
-				tP.style.cssText = "overflow: visible !important; clip-path: none !important; display:inline !important; opacity:1 !important; transform: none !important; visibility: visible !important; z-index: 1 !important; right: 5px !important; bottom:" + e + " !important; z-index: 1 !important; position: absolute !important; filter: opacity(1) !important; font-family: sans-serif;", e8.appendChild(tP), tP.innerHTML = 'Good Job, simplemaps.com! =)', true
+				tP.style.cssText = "overflow: visible !important; clip-path: none !important; display:inline !important; opacity:1 !important; transform: none !important; visibility: visible !important; z-index: 1 !important; right: 5px !important; bottom:" + e + " !important; z-index: 1 !important; position: absolute !important; filter: opacity(1) !important; font-family: sans-serif;", e8.appendChild(tP), tP.innerHTML = 'Good Job! =)', true
 			}
 		}
 
