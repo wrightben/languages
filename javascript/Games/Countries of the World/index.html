@@ -4,72 +4,114 @@
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
 		<title>World Geography</title>
-		<script src="mapdata.js"></script>
-		<script src="worldmap.js"></script>
+		<style>
+			* {
+				margin: 0px;
+				padding: 0px;
+				font-family: "Helvetica";
+				color: #050505;
+			}
+			a {
+				color: rgb(66 133 244);
+				text-decoration: none;
+			}
+			#map {
+				border: 1px solid #050505;
+				height: 95vh;
+			}
+			#text {
+				position: absolute;
+				top: 80%;
+				left: 20px;
+				z-index: 10;
+				max-width: 500px;
+			}
+			h3 {
+				margin-bottom: .5em;
+			}
+			h3 + p {
+				line-height: 1.25em;
+			}
+			svg {
+				height: 94vh !important;
+			}
+		</style>
 	</head>
 	<body>
-		<div style="width: 1500px; height: 1000px;">
-			<div id="map"></div>
+		<div id="text">
+			<h3>World Geography</h3>
+			<p>Click OK to find a country (or not). Click Cancel to find a different country. Click <a href="#" onclick="alert(goal);">here</a> to remember what country you're looking for. Click <a href="#" onclick="zoomOnCountry()">here</a> to see where it is. =)</p>
 		</div>
+		<div id="map"></div>
+		
+		<script src="mapdata.js"></script>
+		<script src="worldmap.js"></script>		
 		<script type="text/javascript"> 
-			simplemaps_worldmap.hooks.click_state = function(id){ // Name of clicked object
-				
+		
+			// HOOK: Map click function
+			simplemaps_worldmap.hooks.click_state = function(id){
 				var name = simplemaps_worldmap_mapdata.state_specific[id].name;
-// 				console.log(name, id, goal);
-
-				quiz_status();
-				
-				
+				quiz_status(name);
 				return false;
 			};
 			
+			// TIMEOUT: Change SVG Height, Prompt for quiz
 			setTimeout(function() {
-				var elements = document.getElementsByTagName('svg');
-				elements.item(2).setAttribute("height", "2000px");
-				
+// 				var elements = document.getElementsByTagName('svg');
+// 				elements.item(2).setAttribute("height", "2000px");
 				quiz_status();
-			}, 2000);
+			}, 1000);
 			
+			// PARSE: Countries
+			var	count = 0,
+				states = [],					
+				names = [],
+				state_specific = simplemaps_worldmap_mapdata.state_specific;
+			
+			for (state in state_specific) {
+				count ++;			
+				states.push(state);
+				names.push(state_specific[state].name);
+				console.log(count, state, state_specific[state].name);
+			};
+			
+			var zoomOnCountry = function() {
+				simplemaps_worldmap.state_zoom(goal_id, function() {})
+			};			
+			
+			
+			// QUIZ: Select Random Country
 			var getRandomName = function() {
 			
 				var p = Math.random();
-				var rand = Math.floor( p * count ); // Range 1 - 10
+				var rand = Math.floor( p * count );
 				
-				return state_specific[states[rand]].name;
+				var id = states[rand];
+				
+				return [ id, state_specific[id].name ];
 				
 			};
 			
+			// QUIZ: Prompt
 			var goal = undefined;
+			var goal_id = undefined;
+			var success = "";			
 			var quiz_status = function(name=-1) {
-				var success = "";
-				
-				if (name == goal) {
-					success = "You found "+name+"!";
-				}
+			
+				if ((name != -1) && (name != goal)) { return; }
+				if (name == goal) { success = "You found "+name+"! "; }
 				
 				var next = false;
-				goal = getRandomName();
 							
 				while (next == false) {
-					goal = getRandomName();
+					var _ = getRandomName();
+					goal = _[1];
+					goal_id = _[0]; 
 					next = confirm( success + "Would you like to find "+goal+"?");
+					success = "";
 				}
 			
 			};
-			
-			var count = 0;	
-			var states = [];					
-			var names = [];
-			var state_specific = simplemaps_worldmap_mapdata.state_specific;
-			
-			for (state in state_specific) {
-				console.log(state_specific[state].name);
-				states.push(state);
-				names.push(state_specific[state].name);
-				count ++;
-			};
-			
-			console.log(count);
-		</script>		
+		</script>
 	</body>
 </html>
