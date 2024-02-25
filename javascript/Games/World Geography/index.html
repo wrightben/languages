@@ -9,10 +9,10 @@
 				margin: 0px;
 				padding: 0px;
 				font-family: "Helvetica";
-				color: #050505;
+				color: rgb(136, 164, 188);
 			}
 			a {
-				color: rgb(66 133 244);
+				color: rgb(66, 133, 244);
 				text-decoration: none;
 			}
 			#map {
@@ -26,13 +26,35 @@
 				top: 80%;
 				left: 20px;
 				z-index: 10;
-				max-width: 500px;
+				width: 450px;
+				padding: 5px;
+				
+				background-color: rgb(255, 255, 255, 0.5);
+				border: 1px solid rgb(237, 237, 237);;
+			}
+			#find {
+				position: absolute;
+				top: 10%;
+				left: 40%;
+				padding: 5px;
+				border: 1px solid rgb(237,237,237);
+				border-radius: 5%;
+				z-index: 10;
+/* 				z-index: -1; */
+				
+				font-size: 48px;
+				background-color: #FFF;
+				opacity: 40%;
+			}
+			#found {
+				font-weight: 700;
+				color: rgb(136, 164, 188);
 			}
 			h3 {
 				margin-bottom: .5em;
 			}
 			h3 + p {
-				line-height: 1.25em;
+				line-height: 1.3em;
 			}
 			svg {
 				height: 94vh !important;
@@ -40,45 +62,51 @@
 		</style>
 	</head>
 	<body>
+		<div id="find"></div>	
 		<div id="text">
 			<h3>World Geography</h3>
-			<p>Click OK to find a country (or not). Click Cancel to find a different country. Click <a href="#" onclick="alert(goal);">here</a> to remember what country you're looking for. Click <a href="#" onclick="zoomOnCountry()">here</a> to see where it is. =)</p>
+			<p>Find <a href="#" onclick="zoomOnCountry()" id="goal"></a>. Correct: <span id="found">0</span></p>
 		</div>
 		<div id="map"></div>
 		
 		<script src="mapdata.js"></script>
-		<script src="worldmap.js"></script>		
+		<script src="worldmap.js"></script>	
+		<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>	
 		<script type="text/javascript"> 
 		
 			// HOOK: Map click function
 			simplemaps_worldmap.hooks.click_state = function(id){
 				var name = simplemaps_worldmap_mapdata.state_specific[id].name;
-				quiz_status(name);
+				
+				if (name == goal) {
+					if (zoomed == 1) {
+						zoomed = 0;
+					} else {
+						found += 1; // Yay! One point! (No point for using the zoom link.)
+						confetti();
+					};
+					
+					// QUIZ: Prompt
+					var _ = getRandomName();
+					goal = _[1];
+					goal_id = _[0];					
+					goal_link.innerHTML = goal;
+					find_display.innerHTML = goal;	
+					
+				} else {
+					found -= 1; // Oops! -1 point for wrong answer
+					if (found < 0) { found = 0; }					
+				};
+				
+				found_display.innerHTML= found;		
+				updateDisplay();						
 				return false;
 			};
 			
-			// TIMEOUT: Change SVG Height, Prompt for quiz
-			setTimeout(function() {
-// 				var elements = document.getElementsByTagName('svg');
-// 				elements.item(2).setAttribute("height", "2000px");
-				quiz_status();
-			}, 1000);
 			
-			// PARSE: Countries
-			var	count = 0,
-				states = [],					
-				names = [],
-				state_specific = simplemaps_worldmap_mapdata.state_specific;
-			
-			for (state in state_specific) {
-				count ++;			
-				states.push(state);
-				names.push(state_specific[state].name);
-				console.log(count, state, state_specific[state].name);
-			};
-			
+			// QUIZ: Help locate country by zooming to it
 			var zoomOnCountry = function() {
-				simplemaps_worldmap.state_zoom(goal_id, function() {})
+				simplemaps_worldmap.state_zoom(goal_id, function() { zoomed = 1; })
 			};			
 			
 			
@@ -94,26 +122,43 @@
 				
 			};
 			
-			// QUIZ: Prompt
-			var goal = undefined;
-			var goal_id = undefined;
-			var success = "";			
-			var quiz_status = function(name=-1) {
+			// CENTER the HUD after a change
+			var updateDisplay = function() {
+				var ow = find_display.offsetWidth;
+				var w = window.innerWidth;	
+				var left = ( ( (w - ow) / 2 ) / w ) * 100;
 			
-				if ((name != -1) && (name != goal)) { return; }
-				if (name == goal) { success = "You found "+name+"! "; }
-				
-				var next = false;
-							
-				while (next == false) {
-					var _ = getRandomName();
-					goal = _[1];
-					goal_id = _[0]; 
-					next = confirm( success + "Would you like to find "+goal+"?");
-					success = "";
-				}
-			
+				find_display.style.left = left.toString()+"%";
 			};
+			
+			
+			// SETUP: Parse Countries
+			var	count = 0,
+				states = [],					
+				names = [],
+				state_specific = simplemaps_worldmap_mapdata.state_specific;
+			
+			for (state in state_specific) {
+				count ++;			
+				states.push(state);
+				names.push(state_specific[state].name);
+				console.log(count, state, state_specific[state].name);
+			};			
+			
+			
+			// VARIABLES
+			var found = 0;
+			var zoomed = 0;
+			var find_display = document.getElementById("find");			
+			var goal_link = document.getElementById("goal");
+			var found_display = document.getElementById("found");			
+			var setup = getRandomName();
+			var goal = setup[1];
+			var goal_id = setup[0];
+			goal_link.innerHTML = goal;	
+			find_display.innerHTML = goal;
+			updateDisplay();	
+			
 		</script>
 	</body>
 </html>
