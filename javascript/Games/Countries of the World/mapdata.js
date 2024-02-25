@@ -1,10 +1,10 @@
 var simplemaps_worldmap_mapdata={
   main_settings: {
     //General settings
-		width: "1600", //or 'responsive'
+		width: "1500", //or 'responsive'
     background_color: "#FFF",
     background_transparent: "no",
-    popups: "detect",
+    popups: "off",
     
 		//State defaults
 		state_description: "State description",
@@ -1228,7 +1228,7 @@ var simplemaps_worldmap_mapdata={
       url: "default"
     },
     GF: {
-      name: "France",
+      name: "French Guiana",
       description: "default",
       color: "default",
       hover_color: "default",

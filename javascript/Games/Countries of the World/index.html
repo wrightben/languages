@@ -12,10 +12,50 @@
 			<div id="map"></div>
 		</div>
 		<script type="text/javascript"> 
-			simplemaps_worldmap.hooks.click_state = function(id){
-				alert(simplemaps_worldmap_mapdata.state_specific[id].name);
+			simplemaps_worldmap.hooks.click_state = function(id){ // Name of clicked object
+				
+				var name = simplemaps_worldmap_mapdata.state_specific[id].name;
+// 				console.log(name, id, goal);
+
+				if (name == goal) {
+					goal = getRandomName();
+					var next = confirm("You found "+name+"! Would you like to find "+goal+"?");
+				}
+				
+				
 				return false;
-			}
+			};
+			
+			setTimeout(function() {
+				var elements = document.getElementsByTagName('svg');
+				elements.item(2).setAttribute("height", "2000px");
+			}, 2000);
+			
+			var getRandomName = function() {
+			
+				var p = Math.random();
+				var rand = Math.floor( p * count ); // Range 1 - 10
+				
+				return state_specific[states[rand]].name;
+				
+			};
+			
+			var count = 0;	
+			var states = [];					
+			var names = [];
+			var state_specific = simplemaps_worldmap_mapdata.state_specific;
+			
+			for (state in state_specific) {
+				console.log(state_specific[state].name);
+				states.push(state);
+				names.push(state_specific[state].name);
+				count ++;
+			};
+			
+			var goal = getRandomName();
+			alert("Find "+goal+" ");
+			
+			console.log(count);
 		</script>		
 	</body>
 </html>
