@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>World Geography</title>
+		<script src="mapdata.js"></script>
+		<script src="worldmap.js"></script>
+	</head>
+	<body>
+		<div style="width: 1500px; height: 1000px;">
+			<div id="map"></div>
+		</div>
+		<script type="text/javascript"> 
+			simplemaps_worldmap.hooks.click_state = function(id){
+				alert(simplemaps_worldmap_mapdata.state_specific[id].name);
+				return false;
+			}
+		</script>		
+	</body>
+</html>
