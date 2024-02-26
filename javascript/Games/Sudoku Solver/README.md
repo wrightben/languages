@@ -73,9 +73,6 @@ A long-term strategy for solving is to use a database of known puzzles.
 
 
 #### TODO LIST
-- [x] Can I make a template? (A pattern, not a puzzle.)
-- [x] Can I generate more templates using the S-R method? No. (Answer 1)
+- [x] Can I make a template? Yes. Easily enough to show a kid how to do it.
+- [x] Can I generate more templates using only the S-R method? No.
 - [ ] How is it guaranteed that a sudoku is human solvable?
-
-
-1. When a 6 replaces the 1 in the top row of the "template" is every other 6 always positioned in the same relationship? (Reflections and rotations are not meaningful.)
