@@ -41,7 +41,7 @@ The numbers can just be substituted for others. How many of these "templates" ex
 
 S-R METHOD:
 
-Select a number at random [1-9] and replace all occurrences of a random number in the puzzle [1-9]. And do this until I had a new puzzle. I could create a **lot** of puzzles by using this template and the S-R method. But can I generate them all with this method?
+Select a number at random [1-9] and replace all occurrences of a random number in the puzzle [1-9]. I could create a **lot** of puzzles by using this template and the S-R method. But can I generate them all with this method?
 
 
 #### GENERATING A TEMPLATE:
