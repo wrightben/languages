@@ -57,7 +57,7 @@ Triads: Imagine moving 1 row up or down. It's not possible because it's constrai
 The 3 individual rows or columns of a triad can also be reordered.
 
 
-#### CRACKING:
+#### CRACKING
 
 A strategy for using my existing code is to create the puzzle regex, do the intersections once, get the lists for all rows, columns, and boxes, and then iterate over one of the lists. Iterate: Commit to one of the items from the shortest list (> 1) of a grep and solve the rest of the puzzle. The list must be longer than 1 because that's a solved list.
 
