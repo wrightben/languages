@@ -71,7 +71,7 @@ A strategy for using my existing code is to create the puzzle regex, do the inte
 
 A long-term strategy for solving is to use a database of known puzzles.
 
-#### MATRIX OPERATIONS
+##### COLLECTIONS FOR MATRIX-LIKE OPERATIONS
 
 ```
 [	// Indicies for ... 
