@@ -74,5 +74,5 @@ A long-term strategy for solving is to use a database of known puzzles.
 
 #### TODO LIST
 - [x] Can I make a template? Yes. Easily enough to show a kid how to do it.
-- [x] Can I generate more templates using only the S-R method? No.
+- [x] Can I generate more templates using only the S-R method? No. Need transformations.
 - [ ] How is it guaranteed that a sudoku is human solvable?
