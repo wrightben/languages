@@ -57,7 +57,7 @@ Triads: Imagine moving 1 row up or down. It's not possible because it's constrai
 The 3 individual rows or columns of a triad can also be reordered.
 
 
-#### SOLVING:
+#### CRACKING:
 
 A strategy for using my existing code is to create the puzzle regex, do the intersections once, get the lists for all rows, columns, and boxes, and then iterate over one of the lists. Iterate: Commit to one of the items from the shortest list (> 1) of a grep and solve the rest of the puzzle. The list must be longer than 1 because that's a solved list.
 
@@ -67,6 +67,7 @@ A long-term strategy for solving is to use a database of known puzzles.
 #### TODO LIST
 - [ ] Can I make a template? (A pattern, not a puzzle.)
 - [x] Can I generate more templates using the S-R method? No. (Answer 1)
+- [x] How is it guaranteed that a sudoku is human solvable?
 
 
 1. When a 6 replaces the 1 in the top row of the "template" is every other 6 always positioned in the same relationship? (Reflections and rotations are not meaningful.)
