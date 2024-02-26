@@ -55,6 +55,8 @@ A strategy for using my existing code is to create the puzzle regex, do the inte
 
 
 #### TODO LIST
-- [] Can I make a pattern? (A puzzle)
-- [] Can I generate more patterns using the S-R method?
-	- [] Can I define the difference between a puzzle and a pattern?
+- [] Can I make a template? (A puzzle)
+- [x] Can I generate more templates using the S-R method? (No. Answer 1.)
+
+
+1. When a 6 replaces the 1 in the top row of the "template" is every other 6 always positioned in the same relationship? (Reflections and rotations are not meaningful.)
