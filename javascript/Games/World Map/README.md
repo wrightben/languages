@@ -1,6 +1,6 @@
 ### Countries of the World
 
-Play [World Geography](http://wrightben.com/world_geography/)
+Play [World Map](http://wrightben.com/world_map/)
 
 
 
