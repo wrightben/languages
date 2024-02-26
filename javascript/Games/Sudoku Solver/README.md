@@ -41,7 +41,7 @@ node solver.js
 
 Start with 81 lists of [1-9] and use the constraints to place numbers until all the lists were reduced to 1 number. Does this technique ever create a pattern that isn't reproducible by applying the S-R method to the pattern above?
 
-The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the second box is arbitrary.
+The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the second box is arbitrary&mdash;It just doesn't conflict with the sequences in Box 1.
 
 #### SUBSTITUTING
 
