@@ -45,7 +45,7 @@ The manual technique is to use the given first row: 9...1. And then place triple
 
 MASKING
 
-Numbers have to be removed to make a valid Sudoku. What guarantees the puzzle is human solvable?
+Numbers have to be removed to make a valid Sudoku. What guarantees the puzzle is human solvable? How many mask templates (patterns of empty cells) are there?
 
 #### SUBSTITUTING
 
