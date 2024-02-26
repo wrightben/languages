@@ -23,7 +23,7 @@ node solver.js
 	- creates the arrays of the rows, boxes and columns used in the other files. It's not needed anymore, but it might be useful for parts in the future.
 
 ----
-
+```
 6	9	2	1	5	4	3	7	8
 8	1	5	6	3	7	4	2	9
 7	3	4	2	8	9	5	6	1
@@ -33,6 +33,7 @@ node solver.js
 9	4	6	5	7	1	8	3	2
 1	2	8	9	6	3	7	4	5
 5	7	3	8	4	2	1	9	6
+```
 
 #### SUBSTITUTING:
 
@@ -54,6 +55,6 @@ A strategy for using my existing code is to create the puzzle regex, do the inte
 
 
 #### TODO LIST
-[] Can I make a pattern? (A puzzle)
-[] Can I generate more patterns using the S-R method?
-	[] Can I define the difference between a puzzle and a pattern?
+- [] Can I make a pattern? (A puzzle)
+- [] Can I generate more patterns using the S-R method?
+	- [] Can I define the difference between a puzzle and a pattern?
