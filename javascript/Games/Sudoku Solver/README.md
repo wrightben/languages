@@ -55,7 +55,7 @@ A strategy for using my existing code is to create the puzzle regex, do the inte
 
 
 #### TODO LIST
-- [] Can I make a template? (A puzzle)
+- [ ] Can I make a template? (A puzzle)
 - [x] Can I generate more templates using the S-R method? (No. Answer 1.)
 
 
