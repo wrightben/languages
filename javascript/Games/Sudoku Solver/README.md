@@ -16,9 +16,6 @@ node solver.js
 - ./filter/filter.js
 	- greps a list (row, column or box) regexp from the list of 9!
 
-
-#### Extraneous
-
 - ./extraneous - puzzle helper/puzzle helper.numbers
 	- Visual aid of the puzzle grid (clues, regexes, cell indicies). Use solver.js to create the data.
 
