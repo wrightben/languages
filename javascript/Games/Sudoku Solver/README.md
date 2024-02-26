@@ -39,9 +39,9 @@ node solver.js
 45	7	1	3		8	6	5		2	4	9
 ```
 
-Start with 81 lists of [1-9] and use the constraints to place numbers until all the lists were reduced to 1 number. Does this technique ever create a pattern that isn't reproducible by applying the S-R method to the pattern above?
+The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the second box is arbitrary&mdash;It just doesn't conflict with the sequences in Box 1. Then apply transformations until the pattern appears random.
 
-The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the second box is arbitrary&mdash;It just doesn't conflict with the sequences in Box 1.
+A programmatic technique might start with 81 lists of [1-9] and use the constraints to place numbers until all the lists were reduced to 1 number. I'm not sure why it would ever be necessary to do this. The base pattern can be transformed.
 
 MASKING
 
