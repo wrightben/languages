@@ -60,7 +60,7 @@ Select a number at random [1-9] and replace all occurrences of a random number i
 ```
 
 ```
--	45	45	45	0	45	45	45	0	45	45	45
+-	45	45	45		45	45	45		45	45	45
 45	9	8	7		6	5	4		3	2	1
 45	6	5	4		3	2	1		9	8	7
 45	3	2	1		9	8	7		6	5	4
