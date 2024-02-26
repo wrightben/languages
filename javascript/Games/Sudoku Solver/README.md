@@ -51,3 +51,9 @@ Start with 81 lists of [1-9] and use the constraints to place numbers until all 
 #### SOLVING:
 
 A strategy for using my existing code is to create the puzzle regex, do the intersections once, get the lists for all rows, columns, and boxes, and then iterate over one of the lists. Iterate: Commit to one of the items from the shortest list (> 1) of a grep and solve the rest of the puzzle. The list must be longer than 1 because that's a solved list.
+
+
+#### TODO LIST
+[] Can I make a pattern? (A puzzle)
+[] Can I generate more patterns using the S-R method?
+	[] Can I define the difference between a puzzle and a pattern?
