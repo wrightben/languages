@@ -24,17 +24,30 @@ node solver.js
 
 ----
 
-#### Algorithms - Solving
+6	9	2	1	5	4	3	7	8
+8	1	5	6	3	7	4	2	9
+7	3	4	2	8	9	5	6	1
+3	5	1	7	2	6	9	8	4
+4	6	9	3	1	8	2	5	7
+2	8	7	4	9	5	6	1	3
+9	4	6	5	7	1	8	3	2
+1	2	8	9	6	3	7	4	5
+5	7	3	8	4	2	1	9	6
 
-1. The intersection of a row, col, box will sometimes yield a distinct value for a cell.
-2. The 3 lists can sometimes be used to reduce each other until a distinct answer for the cell is revealed.
-	- If a Row, Column or Box contains just 1 number in a cell, the other two lists must be limited to that number in that cell. 
-	- The shortening lists further reduce the possible numbers in all the cells those lists are connected to.
-3. A *box* intersects with rows and columns at 3 cells; A row and a column intersect at just 1 cell.
-4. A solution does not come from a set of 9^81. It's **much** smaller.
-5. A list of solved puzzles can be filtered through the regex for an unsolved puzzle.
-	- Puzzle sites already have the solutions to their puzzles
+#### SUBSTITUTING:
 
-#### Algorithms - Generating
+The numbers can just be substituted for others. How many of these "templates" exist?
 
-Creating a sudoku might use the opposite approach. Starting with 81 lists of [1..9], randomly select a number and then remove it from all lists in the intersecting row, column and box. Iterate over the shortest lists for each successive choice. Numbers have to be removed to create a puzzle. I'm not sure if the blank cells can be ascertained from the final steps of the generative process.
+S-R METHOD:
+
+Select a number at random [1-9] and replace all occurrences of a random number in the puzzle [1-9]. And do this until I had a new puzzle. I could create a **lot** of puzzles by using this template and the S-R method. But can I generate them all with this method?
+
+
+#### GENERATING A TEMPLATE:
+
+Start with 81 lists of [1-9] and use the constraints to place numbers until all the lists were reduced to 1 number. Does this technique ever create a pattern that isn't reproducible by applying the S-R method to the pattern above?
+
+
+#### SOLVING:
+
+A strategy for using my existing code is to create the puzzle regex, do the intersections once, get the lists for all rows, columns, and boxes, and then iterate over one of the lists. Iterate: Commit to one of the items from the shortest list (> 1) of a grep and solve the rest of the puzzle. The list must be longer than 1 because that's a solved list.
