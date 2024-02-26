@@ -21,11 +21,14 @@ node solver.js
 
 #### Algorithms - Solving
 
-The 3 lists of permutations will sometimes yield a distinct answer for the cell in question. Other times, the 3 lists can be used to whittle each other until a distinct answer for the cell is revealed. **A box intersects with rows and columns at 3 cells; A row and a column intersect at just 1 cell.**
-
-If list Row, Column or Box contains just 1 number in the cell, the other two lists must be limited to that number in that cell. The shortening lists further reduce the possible numbers in all the cells those lists are connected to.
-
-There are not 9^81 solved puzzles. Knowing this, it should be possible to determine the solved puzzle by filtering a list of all solved puzzles for the unsolved puzzle. The slight changes to understanding are that there are fewer solved puzzles than ignorance might cause you to believe and that the process for determining and presenting the solved puzzle could be different than iterating over incomplete cells.
+1. The intersection of a row, col, box will sometimes yield a distinct value for a cell.
+2. The 3 lists can sometimes be used to reduce each other until a distinct answer for the cell is revealed. 
+3. Note: **A *box* intersects with rows and columns at 3 cells; A row and a column intersect at just 1 cell.**
+	- If a Row, Column or Box contains just 1 number in a cell, the other two lists must be limited to that number in that cell. 
+	- The shortening lists further reduce the possible numbers in all the cells those lists are connected to.
+4. The math is never 9^81. It's **much** smaller.
+5. A list of solved puzzles can be filtered through the regex for an unsolved puzzle.
+	- Puzzle sites already have the solutions to their puzzles
 
 #### Algorithms - Generating
 
