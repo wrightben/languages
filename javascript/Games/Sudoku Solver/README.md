@@ -14,10 +14,10 @@ node solver.js
 
 #### Extraneous
 
-1. ./extraneous - puzzle helper/puzzle helper.numbers
+- ./extraneous - puzzle helper/puzzle helper.numbers
 	- Visual aid of the puzzle grid (clues, regexes, cell indicies). Use solver.js to create the data.
 
-2. ./extraneous - rows columns boxes/intersections.js
+- ./extraneous - rows columns boxes/intersections.js
 	- creates the arrays of the rows, boxes and columns used in the other files. It's not needed anymore, but it might be useful for parts in the future.
 
 
