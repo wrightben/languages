@@ -36,6 +36,7 @@ var boxes = [
 
 
 // GENERATE THE INTERSECTIONS of ROWS, COLUMNS, BOXES for 81 CELLS
+// The output of the code below is the cells var in solver.js
 var tot = 81;
 var is = new Array(tot);
 for (var i = 0, j = 1; i < tot; i++, j++) {

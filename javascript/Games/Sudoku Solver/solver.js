@@ -118,6 +118,7 @@ var boxes = [
 
 // Left-to-Right, Row-by-Row
 var puzzle = "..8.93.72......3...1...6.....4...5......3.8..6....9.43..7.2..948..7............5.";
+var puzzle = "2..8....3.5..26..9...1...6...7.....51...34.9....6......1....3..3...92.4.....8....";
 
 var regexes = puzzle.split("");
 regexes.forEach(function(e,i) {
@@ -348,6 +349,7 @@ var sweep = function() {
 		
 	};
 	
+	console.log("-----------REGEX-----------\n",tsvRegexes().join("\n"));	
 	if (repeat == true) { sweep(); }
 	
 	// Plenty of optimizations for this, but it seems to solve medium-difficulty puzzles at Sudoku.com
