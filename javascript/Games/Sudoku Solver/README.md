@@ -71,6 +71,23 @@ A strategy for using my existing code is to create the puzzle regex, do the inte
 
 A long-term strategy for solving is to use a database of known puzzles.
 
+#### MATRIX OPERATIONS
+
+```
+[	// Indicies for ... 
+	[], //1s
+	[], //2s
+	[],	//3s ...
+	[],
+	[],
+	[],
+	[],
+	[],
+	[]								
+] 
+// AND ... a string holding 81 characters corresponding to the values.
+```
+
 
 #### TODO LIST
 - [x] Can I make a template? Yes. Easily enough to show a kid how to do it.
