@@ -43,6 +43,10 @@ Start with 81 lists of [1-9] and use the constraints to place numbers until all 
 
 The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the second box is arbitrary&mdash;It just doesn't conflict with the sequences in Box 1.
 
+MASKING
+
+Numbers have to be removed to make a valid Sudoku. What guarantees the puzzle is human solvable?
+
 #### SUBSTITUTING
 
 The numbers can just be substituted for others. How many of these "templates" exist?
