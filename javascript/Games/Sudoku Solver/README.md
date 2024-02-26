@@ -1,6 +1,6 @@
 ## SUDOKU
 
-A sudoku solution doesn't excite me, though I enjoyed writing the functions. It might be nice to have a sudoku solver to test generated puzzles. I wonder if there are any valid puzzles that cannot be solved using this algorithm. If sudokus are your work or hobby, send me your thoughts.
+If sudokus are your work or hobby, send me your thoughts.
 
 ### Use
 
