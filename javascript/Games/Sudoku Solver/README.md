@@ -39,7 +39,7 @@ node solver.js
 45	7	1	3		8	6	5		2	4	9
 ```
 
-The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the 4th box is arbitrary&mdash;It just doesn't conflict with the sequences in Box 1. Then apply transformations until the pattern appears random.
+The manual technique is to use the given first row: 9...1. And then place triplets in each box. The sequence 598 in the first row of the 4th box is arbitrary&mdash;It just doesn't conflict with the sequences in box 1. Then apply transformations until the pattern appears random.
 
 A programmatic technique might start with 81 lists of [1-9] and use the constraints to place numbers until all the lists were reduced to 1 number. I'm not sure why it would ever be necessary to do this. A known base pattern can be transformed.
 
