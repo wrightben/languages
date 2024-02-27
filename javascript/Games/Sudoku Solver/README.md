@@ -51,7 +51,7 @@ S-R METHOD
 
 Select a number at random [1-9] and replace all occurrences of a random number in the puzzle [1-9]. I could create a **lot** of puzzles by using this template and the S-R method. But can I generate all puzzles with this method? No.
 
-#### REFLECTIONS, ROTATIONS, TRIADS and more
+#### TRANSFORMATIONS: Reflections, Rotations, Triads and more
 Reflections, rotations and triads can change the template. 
 
 Triads: Imagine moving 1 row up or down. It's not possible because it's constrained by a box. But the 3 rows that make up a box (a macro row) can be moved up or down. This works for columns, too.
