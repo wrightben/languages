@@ -67,9 +67,10 @@ Any 2 numbers in a box can be swapped&mdash;But they have to be swapped in all b
 ```
 9! * 12096 * 216  (Macro Row 1)
 12096 * ? * ?
-216 * ? * 1
+216 * ? * 1?
 ```
 
+Box 2's 12096 are NOT duplicates—Box 1 is different.
 Boxes with ? seem like ranges. Numbers might overlap.
 Box 5 and 6 seem like ranges based on the outcome of box 2 and 3.
 
@@ -80,7 +81,7 @@ A strategy for using my existing code is to create the puzzle regex, do the inte
 
 Does this technique ever produce more than one solution in a valid puzzle? (It should not.)
 
-A long-term strategy for solving is to use a database of known puzzles.
+A long-term strategy for solving is to use a database of known puzzles&mdash;They can be searched by patterns of indicies.
 
 ##### COLLECTIONS FOR MATRIX-LIKE OPERATIONS
 
