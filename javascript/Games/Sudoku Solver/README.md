@@ -58,7 +58,9 @@ Triads: Imagine moving 1 row up or down. It's not possible because it's constrai
 
 The 3 individual rows or columns of a triad can also be reordered.
 
-Any 2 numbers in a box can be swapped&mdash;But they have to be swapped in all boxes. Swapping can be done successively.
+Any 2 numbers in a box can be swapped&mdash;But they have to be swapped in all boxes. Swapping can be done successively. 
+	- This is the S-R method.
+	- This is reording of the rows of indicies
 
 
 #### CRACKING
