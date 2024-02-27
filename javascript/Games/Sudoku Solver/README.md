@@ -39,7 +39,7 @@ The manual technique is to use the given first row: 9...1. And then place triple
 
 A programmatic technique might start with 81 lists of [1-9] and use the constraints to place numbers until all the lists were reduced to 1 number. I'm not sure why it would ever be necessary to do this. A known base pattern can be transformed.
 
-MASKING
+##### MASKING
 
 Numbers have to be removed to make a valid Sudoku. What guarantees the puzzle is human solvable? How many mask templates (patterns of empty cells) are there?
 
