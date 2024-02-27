@@ -62,10 +62,11 @@ Any 2 numbers in a box can be swapped&mdash;But they have to be swapped in all b
 
 
 #### MATH
->[!NOTE] SUDOKU MATH Box by Box
->9! * 12096 * 216  (Macro Row 1)
->12096 * ? * ?
->216 * ? * 1
+> [!NOTE]
+> **SUDOKU MATH Box by Box**
+> 9! * 12096 * 216  (Macro Row 1)
+> 12096 * ? * ?
+> 216 * ? * 1
 >
 > Boxes with ? seem like ranges. Numbers might overlap.
 > Box 5 and 6 seem like ranges based on the outcome of box 2 and 3.
