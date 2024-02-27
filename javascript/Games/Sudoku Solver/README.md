@@ -9,13 +9,13 @@ node solver.js
 ```
 
 ### Files
-- **./solver.js**
+- **solver.js**
 	- solves a sudoku puzzle
-- **./filter/filter.js**
+- **filter/filter.js**
 	- greps a list (row, column or box) regexp from the list of 9!
-- **./extraneous - puzzle helper/puzzle helper.numbers**
+- **extraneous - puzzle helper/puzzle helper.numbers**
 	- Visual aid of the puzzle grid (clues, regexes, cell indicies). Use solver.js to create the data.
-- **./extraneous - rows columns boxes/intersections.js**
+- **extraneous - rows columns boxes/intersections.js**
 	- creates the arrays of the rows, boxes and columns used in the other files. It's not needed anymore, but it might be useful for parts in the future.
 
 ----
