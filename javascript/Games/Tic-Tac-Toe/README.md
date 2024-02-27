@@ -4,7 +4,7 @@ Play [Tic-Tac-Toe](http://wrightben.com/tic-tac-toe/)
 
 <br />
 
-#### Files
+### Files
 - **database.js**
 	- Creates a list of the permutations for [1-9]. It can be used to filter that list using regex. And it can be used to generate a list of the game results for each permutation. 
 - **computer_player.js**
@@ -14,7 +14,7 @@ Play [Tic-Tac-Toe](http://wrightben.com/tic-tac-toe/)
 <br />
 
 
-#### Notes
+### Notes
 
 ```
 for (var i = 1; i <= 9; i ++) {
