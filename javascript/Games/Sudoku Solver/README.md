@@ -61,6 +61,16 @@ The 3 individual rows or columns of a triad can also be reordered.
 Any 2 numbers in a box can be swapped&mdash;But they have to be swapped in all boxes. Swapping can be done successively. This is the same as the S-R method and reordering of the rows of indicies
 
 
+#### MATH
+>[!NOTE]SUDOKU MATH Box by Box
+>9! * 12096 * 216  (Macro Row 1)
+>12096 * ? * ?
+>216 * ? * 1
+
+>Boxes with ? seem like ranges. Numbers might overlap.
+>Box 5 and 6 seem like ranges based on the outcome of box 2 and 3.
+
+
 #### CRACKING
 
 A strategy for using my existing code is to create the puzzle regex, do the intersections once, get the lists for all rows, columns, and boxes, and then iterate over one of the lists. Iterate: Commit to one of the items from the shortest list (> 1) of a grep and solve the rest of the puzzle. The list must be longer than 1 because that's a solved list.
@@ -92,3 +102,9 @@ A long-term strategy for solving is to use a database of known puzzles.
 - [x] Can I make a template? Yes. Easily enough to show a kid how to do it.
 - [x] Can I generate more templates using only the S-R method? No. Need transformations.
 - [ ] How is it guaranteed that a sudoku is human solvable?
+- [ ] How many Sudoku puzzles are there?
+	- 9! permutations in the first box. It's now possible to count every permutation possible for every permutation in the first box. And second box. And third box. The 4th box is constrained by the 1st box (like the 2nd box is). 
+- [ ] Is it a valid approach to fill in the outer boxes and leave the center unfilled? (Why would anyone do that?)
+- [ ] 
+	
+	
