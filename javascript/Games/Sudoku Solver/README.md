@@ -81,6 +81,7 @@ A long-term strategy for solving is to use a database of known puzzles.
 	[],
 	[]								
 ] 
+// Reordering the 9 rows of indicies gives you 9! puzzles for this template.
 // AND ... a string holding 81 characters corresponding to the values.
 ```
 
