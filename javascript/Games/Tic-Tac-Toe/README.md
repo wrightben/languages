@@ -2,7 +2,7 @@
 
 Play [Tic-Tac-Toe](http://wrightben.com/tic-tac-toe/)
 
-
+---
 
 #### Files
 - **database.js**
@@ -10,7 +10,7 @@ Play [Tic-Tac-Toe](http://wrightben.com/tic-tac-toe/)
 - **computer_player.js**
 	- Plays as "o". Requires database.js
 
-
+---
 
 #### Notes
 
