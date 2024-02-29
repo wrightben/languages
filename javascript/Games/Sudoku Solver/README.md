@@ -106,8 +106,6 @@ A long-term strategy for solving is to use a database of known puzzles&mdash;The
 - [x] Can I make a template? Yes. Easily enough to show a kid how to do it.
 - [x] Can I generate more templates using only the S-R method? No. Need transformations.
 - [ ] How is it guaranteed that a sudoku is human solvable?
-- [ ] How many Sudoku puzzles are there?
-	- 9! permutations in the first box. It's now possible to count every permutation possible for every permutation in the first box. And second box. And third box. The 4th box is constrained by the 1st box (like the 2nd box is). 
 - [ ] Is it a valid approach to fill in the outer boxes and leave the center unfilled? (Why would anyone do that?)
 	
 	
