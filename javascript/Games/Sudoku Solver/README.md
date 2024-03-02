@@ -66,7 +66,7 @@ Any 2 numbers in a box can be swapped&mdash;But they have to be swapped in all b
 ##### SUDOKU MATH Box by Box
 ```
 9! * 12096 * 216  (Macro Row 1)
-12096 * 536? * ?
+12096 * ~400-536? * ?
 216 * ? * 1?
 ```
 
