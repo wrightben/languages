@@ -1,7 +1,6 @@
 javascript: (function () {
 	
-	var x;
-	if (typeof x != "undefined") { clearInterval(x); return; }
+	if (typeof x != "undefined") { clearInterval(x); x = undefined; return; }
 
 	x = setInterval(function() {
 		
