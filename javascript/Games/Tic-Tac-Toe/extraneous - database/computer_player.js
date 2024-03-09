@@ -5,7 +5,7 @@
 	over an index of functions and doing an object comparison instead of
 	using a string as an id.
 	
-	It might be interesting to think through this design—I'm not sure yet
+	It might be interesting to think through this design. I'm not sure yet
 	if I would change my code or change the language itself. Why aren't
 	both parameters strings?
 */
