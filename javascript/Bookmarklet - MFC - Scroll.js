@@ -53,7 +53,7 @@ javascript:(function(){
 		});		
 	};
 	
-	/*	Additional Bookmarklet: 
+	/*	Additional Bookmarklets: 
 		javascript:sb_top();
 		javascript:sb_up();
 	*/
