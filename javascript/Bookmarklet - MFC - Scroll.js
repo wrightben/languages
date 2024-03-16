@@ -8,7 +8,6 @@ javascript:(function(){
 	*/
 	var sb_row_count = 3;
 
-
 	if (typeof x != "undefined") { 
 		console.log("Clear "+x); 
 		clearInterval(x);
@@ -29,13 +28,21 @@ javascript:(function(){
 			}
 		}
 	
-		var scroll_amount = row_height * sb_row_count;
+		sb_scroll_amount = row_height * sb_row_count;
 		sb_e.scrollBy({
-			top: scroll_amount,
+			top: sb_scroll_amount,
 			left: 0,
 			behavior: "smooth" /* instant | smooth */
 		});
-		console.log('sb: '+scroll_amount);
+		console.log('sb: '+sb_scroll_amount);
+	};
+	
+	sb_up = function() {
+		sb_e.scrollBy({
+			top: sb_scroll_amount * -1,
+			left: 0,
+			behavior: "smooth" /* instant | smooth */
+		});	
 	};
 	
 	sb_top = function() {
@@ -46,7 +53,10 @@ javascript:(function(){
 		});		
 	};
 	
-	/* Additional Bookmarklet: javascript:sb_top(); */
+	/*	Additional Bookmarklet: 
+		javascript:sb_top();
+		javascript:sb_up();
+	*/
 	
 	sb();
 	
