@@ -1,4 +1,5 @@
-## This was my final project for Harvard (edX) CS50’s Introduction to Programming with Python
+[!NOTE]
+This was my final project for Harvard (edX) CS50’s Introduction to Programming with Python
 
 
 ## Design Considerations
