@@ -1,3 +1,8 @@
+> [!NOTE]
+> Download the repo zip and upload it to Meta.ai to play this game.<br/>
+> Read the Meta.ai analysis of this game and see its bell curve rating at:<br/>
+> https://www.meta.ai/share/c/jU4x74txwT
+
 ### Tic-Tac-Toe
 
 Play [Tic-Tac-Toe](http://wrightben.com/tic-tac-toe/)
