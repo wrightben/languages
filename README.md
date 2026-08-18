@@ -6,7 +6,7 @@ Search + AI generates high-quality solutions to common problems. No need to keep
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
 ### UI/UX vs Software Engineering
-I have experience with 8 popular languages, but I'm not an excellent software engineer by software-engineering standards. My passion was UX and, necessarily, UI.
+I have experience with 7 popular languages, but I'm not an excellent software engineer by software-engineering standards. My passion was UX and, necessarily, UI.
 
 I have a strong preference for lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
 
