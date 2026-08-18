@@ -1,21 +1,16 @@
 ### Overview
-The Search + AI ability to generate high-quality solutions to common problems has eliminated the need to keep them in a personal repo, so I've deleted most of what I had committed over the last 15 years. The *Programming Projects* list below outlines the projects I have worked on.
+Search + AI generate high-quality solutions to common problems which has eliminated the need to keep them in a personal repo. Because of this, I've deleted most of the code I previously had.
 
 ### Resume
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
 ### UI-UX
-I have experience with 8 popular languages, but I'm not a very good software engineer by software-engineering standards. My passion is UX and, necessarily, UI. I have a strong preference for lightweight code, especially now that AI can translate between languages. On the continuum, I'm near the extreme—which rarely happens for me. I'm something of a minimalist. I don't like frameworks, dependencies, modules, or type-checking. I'm not *always* interested in optimal algorithms. But I do expect things to work—really well, in fact.
+I have experience with 8 popular languages, but I'm not a very good software engineer by software-engineering standards. My passion is UX and, necessarily, UI.
 
-Here are a few sites that I think are doing a really great job on the front end:
+I have a strong preference for lightweight code, especially now that AI can translate between languages. On the continuum, I'm near the extreme—which rarely happens for me. I'm something of a minimalist; I like things simple. I expect things to be intuitive; I expect things to work really well.
 
-* **Khan Academy** — The 2015 All Math Page (a 100 × 100 block of color-changing progress topics) was excellent!
-* **Lumosity**
-* **Google Docs**
-* **GitHub**
-* **Instagram**
-* **ChatGPT**
+I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *always* interested in optimal algorithms.
 
 ### Programming Projects
 * *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
