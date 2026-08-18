@@ -16,9 +16,9 @@ I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *alw
 * *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
 * *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/pace-chart](https://bit.ly/pace-chart)
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map) - Based on [PurposeGames - Countries of Europe](https://www.purposegames.com/game/countries-europe-quiz)
-* [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe) - Lightweight
-* [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper) - Lightweight
-* Bookmarklets (My favorite UI-UX tool!)
+* [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
+* [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
+* Bookmarklets
 	* Password Suggest
 	* Instagram and MFC Scroll
 * Basic [Algorithms](https://github.com/wrightben/languages/tree/main/Algorithms)
