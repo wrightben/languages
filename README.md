@@ -1,5 +1,5 @@
 ### Overview
-Search + AI generates high-quality solutions to common problems, which has eliminated the need to keep them in a personal repo. Because of this, I've deleted most of the code I previously had.
+Search + AI generates high-quality solutions to common problems. No need to keep example code here.
 
 ### Resume
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
