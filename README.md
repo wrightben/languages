@@ -1,5 +1,5 @@
 ### Overview
-This is my public professional profile. Search + AIs ability to generate high-quality solutions to common problems has eliminated the need to keep them in a personal repo, so I've deleted most of what I had committed over the last 15 years. The *Programming Projects* list below outlines the projects I worked on.
+Search + AIs ability to generate high-quality solutions to common problems has eliminated the need to keep them in a personal repo, so I've deleted most of what I had committed over the last 15 years. The *Programming Projects* list below outlines the projects I worked on.
 
 ### Resume
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
