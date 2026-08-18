@@ -9,8 +9,8 @@ Search + AIs ability to generate high-quality solutions to common problems has e
 * *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
 * *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/pace-chart](https://bit.ly/pace-chart)
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map) - Based on [PurposeGames - Countries of Europe](https://www.purposegames.com/game/countries-europe-quiz)
-* [Tic Tac Toe](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe) - Lightweight - w/Humanistic Game Engine
-* [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper) - Lightweight - 81-cell
+* [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe) - Lightweight
+* [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper) - Lightweight
 * Bookmarklets (My favorite UI-UX tool!)
 	* Password Suggest
 	* Instagram and MFC Scroll
