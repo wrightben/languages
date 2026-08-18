@@ -7,7 +7,7 @@ Search + AIs ability to generate high-quality solutions to common problems has e
 
 ### Programming Projects
 * *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
-* *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/poker-chart](https://bit.ly/poker-chart)
+* *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/pace-chart](https://bit.ly/pace-chart)
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map)—Memorize the countries of the world
 * [Tic Tac Toe](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
