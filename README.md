@@ -1,8 +1,13 @@
+### Overview
+This is my public professional profile. Search + AIs ability to generate high-quality solutions to common problems has eliminated the need to keep them in a personal repo, so I've deleted most of what I had committed over the last 15 years. The *Programming Projects* list below outlines the projects I worked on.
+
 ### Resume
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
 ### Programming Projects
+* *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
+* *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/poker-chart](https://bit.ly/poker-chart)
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map)—Memorize the countries of the world
 * [Tic Tac Toe](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)

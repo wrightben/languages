@@ -1,4 +1,4 @@
-## Coding with AI (ChatGPT, Gemini, Meta AI)
+### Coding with AI (ChatGPT, Gemini, Meta AI)
 
 2006-08-18
 
