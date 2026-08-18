@@ -1,11 +1,11 @@
 ### Overview
-Search + AI generate high-quality solutions to common problems which has eliminated the need to keep them in a personal repo. Because of this, I've deleted most of the code I previously had.
+Search + AI generates high-quality solutions to common problems which has eliminated the need to keep them in a personal repo. Because of this, I've deleted most of the code I previously had.
 
 ### Resume
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
-### UI-UX vs Software Engineering
+### UI/UX vs Software Engineering
 I have experience with 8 popular languages, but I'm not a very good software engineer by software-engineering standards. My passion is UX and, necessarily, UI.
 
 I have a strong preference for lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive; I expect things to work really well.
