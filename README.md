@@ -5,7 +5,7 @@ Search + AI generate high-quality solutions to common problems which has elimina
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
-### UI-UX
+### UI-UX vs Software Engineering
 I have experience with 8 popular languages, but I'm not a very good software engineer by software-engineering standards. My passion is UX and, necessarily, UI.
 
 I have a strong preference for lightweight code, especially now that AI can translate between languages. On the continuum, I'm near the extreme—which rarely happens for me. I'm something of a minimalist; I like things simple. I expect things to be intuitive; I expect things to work really well.
