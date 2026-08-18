@@ -5,6 +5,18 @@ Search + AIs ability to generate high-quality solutions to common problems has e
 [Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
+### UI-UX
+I have experience with 8 major langues (Bash, C++, Java, JavaScript, Perl, PHP, Python and SQL). But I'm not a very good software engineer by softare-engineering standards. My passion is UX, and necessarily, UI. I have a strong preference for lightweight code, especially now that AI can translate. On the continuum, I'm near the extreme—which rarely happens for me. I'm something of a minimalist. I don't like frameworks and dependencies and modules and type-checking. I'm not *always* interested in optimal algorithms. But I do expect things to work—really well, in fact.
+
+Here are a few sites that I think are doing really great job on the front end:
+
+* Khan Academy - The 2015 All Math Page (100 x 100 Block of Color-changing Progress Topics) was excellent!
+* Lumosity (Browser + App)
+* Google Docs
+* GitHub - (B-)
+* Instagram
+* ChatGPT
+
 ### Programming Projects
 * *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
 * *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/pace-chart](https://bit.ly/pace-chart)
