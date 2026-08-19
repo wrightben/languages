@@ -1,6 +1,6 @@
 ### Countries of the World
 
-Play [World Map](http://wrightben.com/world_map/)
+Download source; Open in desktop browser to play
 
 
 

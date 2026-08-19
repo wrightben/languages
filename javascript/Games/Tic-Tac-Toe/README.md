@@ -5,9 +5,7 @@
 
 ### Tic-Tac-Toe
 
-Play [Tic-Tac-Toe](http://wrightben.com/tic-tac-toe/)
-
-
+Download source; Open in desktop browser to play
 
 ### Files
 - **database.js**

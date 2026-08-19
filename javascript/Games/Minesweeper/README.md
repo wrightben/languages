@@ -1,4 +1,7 @@
-Play [Minesweeper](http://wrightben.com/minesweeper)
+### Minesweeper
+
+Download source; Open in desktop browser to play
+
 
 ### Game Play
 
