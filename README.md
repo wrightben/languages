@@ -1,8 +1,7 @@
 ### Overview
 Search + AI generates high-quality solutions to common problems. No need to keep example code here.
 
-### Resume
-[Plum Profile](https://secure.plum.io/en/p/MDzfc23nx6MMS6sp1iTXHw)<br/>
+### Profiles
 [HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
 
 ### UI/UX vs Software Engineering
