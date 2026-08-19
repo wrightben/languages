@@ -9,7 +9,7 @@ Download source; Open in desktop browser to play
 
 ### Files
 - **database.js**
-	- Creates a list of the permutations for [1-9]. It can be used to filter that list using regex. And it can be used to generate a list of the game results for each permutation. 
+	- Creates a list of the permutations for 123456789. These permutations represent every game that can be played.
 - **computer_player.js**
 	- Plays as "o". Requires database.js
 
