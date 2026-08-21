@@ -31,7 +31,7 @@ My native language is vanilla JavaScript. AI can translate.
 * [Texas Hold'em](https://github.com/wrightben/texas-holdem)—Kernel for game play and data analysis
 * Small Business Website—phpLiteAdmin (Soccer Club)
 * DataTables.js and SQLite (Books)
-* [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)—This UX project beat Chess.com and Lichess.org to mobile-capable chess
+* [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)—This UX project beat Chess.com and Lichess.org to mobile-browser chess.
 * Small Business Website—Template (Soccer Club)
 * WebGL (GE.com)
 * SVG Data Visualization
