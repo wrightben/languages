@@ -15,7 +15,7 @@ My native language is vanilla JavaScript. AI can translate.
 
 ### Programming Projects
 * *AI Project* - Poker Trainer (Prototype) - [https://bit.ly/poker-trainer](https://bit.ly/poker-trainer)
-* *AI Project* - Pace Calculator App (Prototype) - [https://bit.ly/pace-chart](https://bit.ly/pace-chart)
+* *AI Project* - Pace Calculator App (Prototype)
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map) - Based on [PurposeGames - Countries of Europe](https://www.purposegames.com/game/countries-europe-quiz)
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
