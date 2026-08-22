@@ -14,8 +14,8 @@ I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *alw
 My native language is vanilla JavaScript. AI can translate.
 
 ### Programming Projects
-* *AI Project* - Poker Trainer (Prototype) - V2: [https://www.meta.ai/share/a/5...](https://www.meta.ai/share/a/51367d59-f0b0-44b3-8ebc-213c57075876)
-	* V2 works with keyboard: Left Arrow → Fold; Right Arrow → Hold; Up Arrow → Next Hand
+* *AI Project* - Poker Trainer (Prototype) - V2: [https://www.meta.ai/share/](https://www.meta.ai/share/a/51367d59-f0b0-44b3-8ebc-213c57075876)
+	* Keyboard: Left Arrow → Fold; Right Arrow → Hold; Up Arrow → Next Hand
 * *AI Project* - Pace Calculator App (Prototype) - [https://tinyurl.com/pace-calc](https://tinyurl.com/pace-calc)
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map) - Based on [PurposeGames - Countries of Europe](https://www.purposegames.com/game/countries-europe-quiz)
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
