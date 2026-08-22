@@ -14,7 +14,7 @@ I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *alw
 My native language is vanilla JavaScript. AI can translate.
 
 ### Programming Projects
-* *AI Project* - Poker Trainer (Prototype) - [https://www.meta.ai/share/](https://www.meta.ai/share/a/51367d59-f0b0-44b3-8ebc-213c57075876)
+* *AI Project* - Poker Fold Trainer (Prototype) - [https://www.meta.ai/share/](https://www.meta.ai/share/a/51367d59-f0b0-44b3-8ebc-213c57075876)
 	* Left Arrow → Fold
 	* Right Arrow → Hold
 	* Up Arrow → Next Hand
