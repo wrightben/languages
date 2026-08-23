@@ -14,8 +14,6 @@ I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *alw
 My native language is vanilla JavaScript. AI can translate.
 
 ### Programming Projects
-
-#### 2026
 * *AI Project* - Mental Math Trainer (Prototype) - [https://tinyurl.com/math-trainer](https://tinyurl.com/math-trainer)
 * *AI Project* - Poker Fold Trainer (Prototype) - [https://www.meta.ai/share/](https://www.meta.ai/share/a/51367d59-f0b0-44b3-8ebc-213c57075876)
 	* Left Arrow → Fold
@@ -24,7 +22,6 @@ My native language is vanilla JavaScript. AI can translate.
 * *AI Project* - Pace Calculator App (Prototype) - [https://tinyurl.com/pace-calc](https://tinyurl.com/pace-calc)
 * *AI Project* - Bookmarklet - Instagram (Desktop) Scroll
 
-#### 2023
 * [World Map](https://github.com/wrightben/languages/tree/main/javascript/Games/World%20Map) - Based on [PurposeGames - Countries of Europe](https://www.purposegames.com/game/countries-europe-quiz)
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
@@ -37,8 +34,6 @@ My native language is vanilla JavaScript. AI can translate.
 		* Mortgage Amortization
 * [Word Search Solver](https://github.com/wrightben/languages/tree/main/python/Games/Word%20Search)
 * Sudoku Solver
-
-#### 2019
 * [Texas Hold'em](https://github.com/wrightben/texas-holdem)—Kernel for game play and data analysis
 * Small Business Website—phpLiteAdmin (Soccer Club)
 * DataTables.js and SQLite (Books)
