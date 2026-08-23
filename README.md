@@ -15,7 +15,7 @@ My native language is vanilla JavaScript. AI can translate.
 
 ### Programming Projects
 * *AI Project* - Mental Math Trainer (Prototype) - [https://tinyurl.com/math-trainer](https://tinyurl.com/math-trainer)
-* *AI Project* - Poker Fold Trainer (Prototype) - [https://www.meta.ai/share/](https://www.meta.ai/share/a/51367d59-f0b0-44b3-8ebc-213c57075876)
+* *AI Project* - Poker Fold Trainer (Prototype) - [https://tinyurl.com/fold-trainer](https://tinyurl.com/fold-trainer)
 	* Left Arrow → Fold
 	* Right Arrow → Hold
 	* Up Arrow → Next Hand
