@@ -15,14 +15,11 @@ My native language is vanilla JavaScript. AI can translate.
 
 ### Current Projects
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
-	- https://tinyurl.com/math-trainer
 * *AI Project* - [Poker Fold Trainer (Prototype)](https://tinyurl.com/fold-trainer)
-	- https://tinyurl.com/fold-trainer
 	* Left Arrow → Fold
 	* Right Arrow → Hold
 	* Up Arrow → Next Hand
 * *AI Project* - [Pace Calculator App (Prototype)](https://tinyurl.com/pace-calc)
-	- https://tinyurl.com/pace-calc
 * *AI Project* - Bookmarklet - Instagram (Desktop) Scroll
 
 ### Past Projects
