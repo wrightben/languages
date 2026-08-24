@@ -25,15 +25,15 @@ My native language is vanilla JavaScript. AI can translate.
 ### Portfolio Projects
 
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
-	- *2023* - 6 hours
+	- **2023** - 6 hours
 	- A 2026 code review by Meta AI called parts of the code clever and novel.
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
-	- *2023* - 4 hours
+	- **2023** - 4 hours
 * [Texas Hold'em](https://github.com/wrightben/texas-holdem)—Kernel for game play and data analysis
-	- *2019 + 2023* - 150 hours programming + API design
+	- **2019 + 2023** - 150 hours programming + API design
 * [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)
-	- *2012* - 250 hours programming + UI/UX
+	- **2012** - 250 hours programming + UI/UX
 	- This UX project beat Chess.com and Lichess.org to mobile-browser chess.
 * [GE.com/flyovers](https://web.archive.org/web/20130310022227/http://www.ge.com/flyovers/)
-	- *2012* - 40 hours for R&D using Three.js
+	- **2012** - 40 hours for R&D using Three.js
 	— Shipped WebGL to a Fortune 10 in 2012!
