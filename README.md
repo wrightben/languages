@@ -28,8 +28,9 @@ My native language is vanilla JavaScript. AI can translate.
 	* **2023** - 6 hours
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
 	* **2023** - 4 hours
-* [Texas Hold'em](https://github.com/wrightben/texas-holdem)—Kernel for game play and data analysis
+* [Texas Hold'em](https://github.com/wrightben/texas-holdem)
 	* **2019 + 2023** - 150 hours programming + API design
+	* Kernel for game play and data analysis
 * [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)
 	* **2012** - 250 hours programming + UI/UX
 	* This UX project beat Chess.com and Lichess.org to mobile-browser chess.
