@@ -1,9 +1,6 @@
 ### Overview
 Search + AI generates high-quality solutions to common problems. No need to keep example code here.
 
-### Profiles
-[HackerRank Profile](https://www.hackerrank.com/profile/wrightben)
-
 ### UI/UX vs Software Engineering
 I've worked with 7 languages. But I'm not an excellent software engineer by software-engineering standards. My passion was UX.
 
