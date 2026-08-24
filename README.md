@@ -7,7 +7,7 @@ Search + AI generates high-quality solutions to common problems. No need to keep
 ### UI/UX vs Software Engineering
 I've worked with 7 languages. But I'm not an excellent software engineer by software-engineering standards. My passion was UX.
 
-I have a strong preference for lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
+I prefer lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
 
 I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *always* interested in optimal algorithms.
 
