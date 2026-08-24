@@ -14,7 +14,7 @@ My native language is vanilla JavaScript. AI can translate.
 * Software Engineer - **50-60th** Percentile
 	- Talents: Ideas-per-line, Innovation
 * UX Lead/Creative Technologist - **90th** Percentile
-	- Talents: Coaching, Management, Researcher
+	- Talents: Coaching, Management, Researching
 
 ### Recent Projects
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
