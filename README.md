@@ -13,7 +13,7 @@ I *don't* like frameworks, dependencies, modules, or type-checking. I'm not *alw
 
 My native language is vanilla JavaScript. AI can translate.
 
-### Programming Projects
+### AI Projects
 * *AI Project* - Mental Math Trainer (Prototype) - [https://tinyurl.com/math-trainer](https://tinyurl.com/math-trainer)
 * *AI Project* - Poker Fold Trainer (Prototype) - [https://tinyurl.com/fold-trainer](https://tinyurl.com/fold-trainer)
 	* Left Arrow → Fold
@@ -22,7 +22,7 @@ My native language is vanilla JavaScript. AI can translate.
 * *AI Project* - Pace Calculator App (Prototype) - [https://tinyurl.com/pace-calc](https://tinyurl.com/pace-calc)
 * *AI Project* - Bookmarklet - Instagram (Desktop) Scroll
 
-### Portfolio Projects
+### Past Projects
 
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
 	- **2023** - 6 hours
