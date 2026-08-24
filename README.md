@@ -26,7 +26,6 @@ My native language is vanilla JavaScript. AI can translate.
 
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
 	- **2023** - 6 hours
-	- A 2026 code review by Meta AI called parts of the code clever and novel.
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
 	- **2023** - 4 hours
 * [Texas Hold'em](https://github.com/wrightben/texas-holdem)—Kernel for game play and data analysis
