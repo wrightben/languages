@@ -11,6 +11,7 @@ I avoid frameworks, dependencies, modules, and type-checking. I'm not *always* i
 My native language is vanilla JavaScript. AI can translate.
 
 ### Recent Projects
+* *AI Project* - [Countries Map Quiz (Prototype)](https://tinyurl.com/countries-quiz)
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
 * *AI Project* - [Poker Fold Trainer (Prototype)](https://tinyurl.com/fold-trainer)
 	* Left Arrow → Fold
