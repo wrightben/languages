@@ -2,13 +2,19 @@
 Search + AI generates high-quality solutions to common problems. No need to keep example code here.
 
 ### UI/UX vs Software Engineering
-I've worked with 7 languages. But I'm not an excellent software engineer by software-engineering standards. My passion was UX.
+I've worked with 7 languages. But I'm not an excellent software engineer by software-engineering standards. My passion was UX. My skills align with adeptly leading UX teams and rapidly delivering high-quality solutions.
 
 I prefer lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
 
 I avoid frameworks, dependencies, modules, and type-checking. I'm not *always* interested in optimal algorithms.
 
 My native language is vanilla JavaScript. AI can translate.
+
+#### Meta AI Analysis of my code and professional profile:
+* Software Engineer - **50-60th** Percentile
+	- Assets: Ideas-per-line, Innovation
+* UX Lead/Creative Technologist - **90th** Percentile
+	- Assets: Coaching, Management
 
 ### Recent Projects
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
