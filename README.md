@@ -10,12 +10,6 @@ I avoid frameworks, dependencies, modules, and type-checking. I'm not *always* i
 
 My native language is vanilla JavaScript. AI can translate.
 
-#### Meta AI Analysis of my code and professional profile:
-* Software Engineer - **50-60th** Percentile
-	- Talents: Ideas-per-line, Innovation
-* UX Lead/Creative Technologist - **90th** Percentile
-	- Talents: Coaching, Management, Researching
-
 ### Recent Projects
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
 * *AI Project* - [Poker Fold Trainer (Prototype)](https://tinyurl.com/fold-trainer)
