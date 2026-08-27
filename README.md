@@ -6,8 +6,6 @@ I've worked with 7 languages. But I'm not an excellent software engineer by soft
 
 I prefer lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
 
-I avoid frameworks, dependencies, modules, and type-checking. I'm not *always* interested in optimal algorithms.
-
 My native language is vanilla JavaScript. AI can translate.
 
 ### Recent Projects
