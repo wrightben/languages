@@ -27,7 +27,7 @@ My native language is vanilla JavaScript. AI can translate.
 	* **2019 + 2023** - 150 hours programming + API design
 	* Kernel for game play and data analysis
 * [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)
-	* **2012** - 250 hours programming + UI/UX
+	* **2013** - 250 hours programming + UI/UX
 	* This UX project beat Chess.com and Lichess.org to mobile-browser chess.
 * [GE.com/flyovers](https://web.archive.org/web/20130310022227/http://www.ge.com/flyovers/)
 	* **2012** - 40 hours for R&D using Three.js
