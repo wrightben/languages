@@ -20,11 +20,11 @@ My native language is vanilla JavaScript. AI can translate.
 ### Past Projects
 
 * [Tic Tac Toe with Optional Regex Game Engine](https://github.com/wrightben/languages/tree/main/javascript/Games/Tic-Tac-Toe)
-	* **2023** - 6 hours
+	* **2023**
 * [Minesweeper](https://github.com/wrightben/languages/tree/main/javascript/Games/Minesweeper)
-	* **2023** - 4 hours
+	* **2023**
 * [Texas Hold'em](https://github.com/wrightben/texas-holdem)
-	* **2019 + 2023** - 150 hours programming + API design
+	* **2019 + 2023**
 	* Kernel for game play and data analysis
 * [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)
 	* **2013** - 250 hours programming + UI/UX
