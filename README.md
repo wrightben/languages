@@ -2,7 +2,7 @@
 Search + AI generates high-quality solutions to common problems. No need to keep example code here.
 
 ### UI/UX vs Software Engineering
-I've worked with 7 languages. But I'm not an excellent software engineer by software-engineering standards. My passion was UX. My skills align with adeptly leading UX teams and rapidly delivering high-quality solutions.
+I've worked with 7 languages. My skills align with adeptly leading UX teams and rapidly delivering high-quality solutions.
 
 I prefer lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
 
