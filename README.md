@@ -1,7 +1,7 @@
 ### UI/UX + Software Engineering
 I've worked with 7 languages.
 
-I prefer lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
+I like simplicity. I prefer lightweight code. I expect things to be intuitive, and I expect things to work really well.
 
 My native language is vanilla JavaScript. AI can translate.
 
