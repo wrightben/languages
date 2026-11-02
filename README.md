@@ -1,8 +1,5 @@
-### Overview
-Search + AI generates high-quality solutions to common problems. No need to keep example code here.
-
 ### UI/UX + Software Engineering
-I've worked with 7 languages. My skills align with adeptly leading UX teams and rapidly delivering high-quality solutions.
+I've worked with 7 languages.
 
 I prefer lightweight code. I'm a minimalist; I like simplicity. I expect things to be intuitive, and I expect things to work really well.
 
@@ -10,10 +7,6 @@ My native language is vanilla JavaScript. AI can translate.
 
 ### Recent Projects
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
-* *AI Project* - [Poker Fold Trainer (Prototype)](https://tinyurl.com/fold-trainer)
-	* Left Arrow → Fold
-	* Right Arrow → Hold
-	* Up Arrow → Next Hand
 * *AI Project* - [Pace Calculator App (Prototype)](https://tinyurl.com/pace-calc)
 * *AI Project* - Bookmarklet - Instagram (Desktop) Scroll
 
