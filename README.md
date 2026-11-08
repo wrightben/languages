@@ -8,7 +8,7 @@ My native language is vanilla JavaScript. AI can translate.
 ### Recent Projects
 * *AI Project* - [Mental Math Trainer (Prototype)](https://tinyurl.com/math-trainer)
 * *AI Project* - [Pace Calculator App (Prototype)](https://tinyurl.com/pace-calc)
-* *AI Project* - Bookmarklet - Instagram (Desktop) Scroll
+* *AI Project* - Bookmarklet - Instagram (Laptop) Scroll
 
 ### Past Projects
 
@@ -21,7 +21,7 @@ My native language is vanilla JavaScript. AI can translate.
 	* Kernel for game play and data analysis
 * [BookmarkChess.com](https://www.youtube.com/@bookmarkchess9509)
 	* **2013** - 250 hours programming + UI/UX
-	* This UX project beat Chess.com and Lichess.org to mobile-browser chess.
+	* This UX project beat Chess.com and Lichess.org to phone-browser chess.
 * [GE.com/flyovers](https://web.archive.org/web/20130310022227/http://www.ge.com/flyovers/)
 	* **2012** - 40 hours for R&D using Three.js
 	* Shipped WebGL to a Fortune 10 in 2012!
